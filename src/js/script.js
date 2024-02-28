@@ -24,4 +24,11 @@
 // liElems[1].setAttribute("id" , "js-text")
 // console.log(liElems)
 
+// let h1Elem = document.getElementById("title")
+// h1Elem.style.color = "red"
+// h1Elem.style.fontSize = "80px"
+//
+// let liElems = document.getElementsByClassName("list-item")
+// liElems[3].style.color = "blue"
+// liElems[3].style.fontWeight = "bold"
 
