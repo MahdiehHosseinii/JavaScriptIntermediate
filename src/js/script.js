@@ -73,3 +73,17 @@
 //     h1Elem.style.color = "red"
 // }
 
+// let bulbImg = document.getElementById("bulb")
+// let btn = document.getElementById("bulbbtn")
+// let bulbFlag = false
+// function turnOffOrOn () {
+//     if (bulbFlag) {
+//         bulbImg.setAttribute("src" , "src/images/bulboff.png")
+//         btn.innerHTML = "turn on"
+//         bulbFlag = false
+//     }else {
+//         bulbImg.setAttribute("src" , "src/images/bulbon.png")
+//         btn.innerHTML = "turn off"
+//         bulbFlag = true
+//     }
+// }
