@@ -53,3 +53,14 @@
 // newDivElem.innerHTML = username
 // console.log(newDivElem)
 
+// let ulElems = document.querySelector("ul")
+// let newLiItem = document.createElement("li")
+// newLiItem.innerHTML = "product"
+// let otherLiElem = document.createElement("li")
+// otherLiElem.innerHTML = "Basket"
+// ulElems.append(otherLiElem)
+// ulElems.append(newLiItem)
+// ulElems.appendChild(otherLiElem)
+// ulElems.appendChild(newLiItem)
+// console.log(ulElems)
+
