@@ -32,3 +32,19 @@
 // liElems[3].style.color = "blue"
 // liElems[3].style.fontWeight = "bold"
 
+// let h1Elem = document.getElementById("title")
+// console.log(h1Elem.innerHTML)
+// h1Elem.innerHTML = "جاوا اسکریپت"
+
+// let liItems = document.querySelectorAll(".list-item")
+// console.log(liItems[2].innerHTML)
+// liItems[2].innerHTML = "سرویس"
+
+// let input = document.getElementById("input")
+// console.log(input.value)
+// input.value = "vue js"
+
+// let select = document.getElementById("select")
+// console.log(select.value)
+// select.value = "Korea"
+
