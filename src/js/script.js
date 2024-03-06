@@ -48,3 +48,8 @@
 // console.log(select.value)
 // select.value = "Korea"
 
+// let username = prompt("enter the username:")
+// let newDivElem = document.createElement("div")
+// newDivElem.innerHTML = username
+// console.log(newDivElem)
+
