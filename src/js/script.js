@@ -64,3 +64,12 @@
 // ulElems.appendChild(newLiItem)
 // console.log(ulElems)
 
+// function clickFunc () {
+//     alert("click shod")
+// }
+
+// let h1Elem = document.getElementById("title")
+// function clickFunc () {
+//     h1Elem.style.color = "red"
+// }
+
