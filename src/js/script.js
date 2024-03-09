@@ -109,3 +109,6 @@
 //     }, 3000)
 // }
 
+// function keyLog () {
+//     console.log("typed")
+// }
