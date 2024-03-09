@@ -1,16 +1,18 @@
-/*@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 .login-page {
     width: 360px;
     padding: 8% 0 0;
     margin: auto;
 }
+
 .form {
     background: #FFFFFF;
     padding: 45px;
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
 .form input {
     font-family: "Roboto", sans-serif;
     background: #f2f2f2;
@@ -21,6 +23,7 @@
     box-sizing: border-box;
     font-size: 14px;
 }
+
 .form button {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
@@ -32,14 +35,17 @@
     font-size: 14px;
     cursor: pointer;
 }
+
 .form button:hover,.form button:active,.form button:focus {
     background: #43A047;
 }
+
 .form .message {
     margin: 15px 0 0;
     color: #b3b3b3;
     font-size: 12px;
 }
+
 .form .message a {
     color: #4CAF50;
     text-decoration: none;
@@ -63,4 +69,8 @@ body {
     right: 10px;
     top: 10px;
     transition: all 1s linear;
-}*/
+}
+
+.username-validation , .password-validation {
+    display: none;
+}

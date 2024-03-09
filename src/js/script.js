@@ -112,3 +112,29 @@
 // function keyLog () {
 //     console.log("typed")
 // }
+
+// let usernameMessage = document.querySelector(".username-validation")
+// let passwordMessage = document.querySelector(".password-validation")
+// let usernameInput = document.querySelector(".username")
+// let passwordInput = document.querySelector(".password")
+//
+// function usernameValidation() {
+//     if (usernameInput.value.length < 12) {
+//         usernameMessage.style.color = "red"
+//         usernameMessage.innerHTML = "* must contain 12 character"
+//         usernameMessage.style.display = "block"
+//     }else {
+//         usernameMessage.style.color = "green"
+//         usernameMessage.innerHTML = "correct username value"
+//     }
+// }
+// function passwordValidation() {
+//     if (passwordInput.value.length < 8) {
+//         passwordMessage.style.color = "red"
+//         passwordMessage.innerHTML = "* must contain 8 character"
+//         passwordMessage.style.display = "block"
+//     }else {
+//         passwordMessage.style.color = "green"
+//         passwordMessage.innerHTML = "correct password value"
+//     }
+// }
