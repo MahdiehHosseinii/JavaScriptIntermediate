@@ -152,3 +152,28 @@
 //     console.log("blur")
 // }
 
+// let usernameInput = document.querySelector(".username")
+// let passwordInput = document.querySelector(".password")
+// let usernameMessage = document.querySelector(".username-validation")
+// let passwordMessage = document.querySelector(".password-validation")
+//
+// function usernameValidation() {
+//     if (usernameInput.value.length < 12) {
+//         usernameMessage.innerHTML = "*must contain 12 character"
+//         usernameMessage.style.color = "red"
+//         usernameMessage.style.display = "block"
+//     }else {
+//         usernameMessage.innerHTML = "correct username value"
+//         usernameMessage.style.color = "green"
+//     }
+// }
+// function passwordValidation() {
+//     if (passwordInput.value.length < 8) {
+//         passwordMessage.innerHTML = "*must contain 8 character"
+//         passwordMessage.style.color = "red"
+//         passwordMessage.style.display = "block"
+//     }else {
+//         passwordMessage.innerHTML = "correct username value"
+//         passwordMessage.style.color = "green"
+//     }
+// }

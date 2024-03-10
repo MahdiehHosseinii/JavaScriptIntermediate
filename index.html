@@ -62,20 +62,24 @@
         <button>login</button>
         <p class="message">not registered <a>create an account</a></p>
     </div>
-</div>
-<div class="modal">
-    لطفا اطلاعات لازم را به درستی وارد نمایید
 </div>-->
-<div class="login-page">
+<!--<div class="login-page">
     <div class="form">
         <input type="text" placeholder="username" class="username" onfocus="usernameFocus()" onblur="usernameBlur()"/> <br/>
         <input type="text" placeholder="password" class="password" onfocus="passwordFocus()" onblur="passwordBlur()"/> <br/>
         <button>login</button>
         <p class="message">not registered <a>create an account</a></p>
     </div>
-</div>
-<div class="modal">
-    لطفا اطلاعات لازم را به درستی وارد نمایید
+</div>-->
+<div class="login-page">
+    <div class="form">
+        <input type="text" placeholder="username" class="username" onblur="usernameValidation()"/>
+        <span class="username-validation"></span>
+        <input type="text" placeholder="password" class="password" onblur="passwordValidation()"/>
+        <span class="password-validation"></span>
+        <button>login</button>
+        <p class="message">not registered <a>create an account</a></p>
+    </div>
 </div>
 <script src="src/js/script.js"></script>
 </body>

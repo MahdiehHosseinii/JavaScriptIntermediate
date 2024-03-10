@@ -71,6 +71,6 @@ body {
     transition: all 1s linear;
 }
 
-.username-validation , .password-validation {
+span {
     display: none;
 }
