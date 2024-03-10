@@ -181,3 +181,13 @@
 // function dblclickEvent () {
 //     console.log("clicked")
 // }
+
+// let h1Elem = document.querySelector(".title")
+// h1Elem.addEventListener("click" , function () {
+//     console.log("clicked")
+// })
+// h1Elem.addEventListener("click" , clickEvent)
+// function clickEvent () {
+//     console.log("clicked")
+// }
+
