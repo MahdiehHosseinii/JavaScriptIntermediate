@@ -138,3 +138,17 @@
 //         passwordMessage.innerHTML = "correct password value"
 //     }
 // }
+
+// function usernameFocus () {
+//     console.log("focus")
+// }
+// function usernameBlur () {
+//     console.log("blur")
+// }
+// function passwordFocus () {
+//     console.log("focus")
+// }
+// function passwordBlur () {
+//     console.log("blur")
+// }
+

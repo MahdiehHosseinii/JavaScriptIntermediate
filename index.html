@@ -53,12 +53,23 @@
 <div class="modal">
     لطفا اطلاعات لازم را به درستی وارد نمایید
 </div>-->
-<div class="login-page">
+<!--<div class="login-page">
     <div class="form">
         <input type="text" placeholder="username" class="username" onkeydown="usernameValidation()"/> <br/>
         <span class="username-validation">* must contain 12 character</span>
         <input type="text" placeholder="password" class="password" onkeydown="passwordValidation()"/> <br/>
         <span class="password-validation">* must contain 8 character</span>
+        <button>login</button>
+        <p class="message">not registered <a>create an account</a></p>
+    </div>
+</div>
+<div class="modal">
+    لطفا اطلاعات لازم را به درستی وارد نمایید
+</div>-->
+<div class="login-page">
+    <div class="form">
+        <input type="text" placeholder="username" class="username" onfocus="usernameFocus()" onblur="usernameBlur()"/> <br/>
+        <input type="text" placeholder="password" class="password" onfocus="passwordFocus()" onblur="passwordBlur()"/> <br/>
         <button>login</button>
         <p class="message">not registered <a>create an account</a></p>
     </div>
