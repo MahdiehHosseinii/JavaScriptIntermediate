@@ -74,4 +74,9 @@ body {
 span {
     display: none;
 }*/
-
+.red {
+    color: red;
+}
+.sm-font {
+    font-size: 40px;
+}

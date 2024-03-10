@@ -191,3 +191,10 @@
 //     console.log("clicked")
 // }
 
+// let h1Elem = document.getElementById("title")
+// h1Elem.addEventListener("click" , function () {
+    // h1Elem.classList.add ("red")
+    // h1Elem.classList.remove("sm-font")
+//     h1Elem.classList.toggle("red")
+// })
+
