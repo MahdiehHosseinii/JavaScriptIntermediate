@@ -212,3 +212,8 @@
 //     blueValue = Math.floor(Math.random() * 255)
 //     document.body.style.backgroundColor = "rgb(" + redValue + "," + greenValue + "," + blueValue + ")"
 // },2000)
+
+// let countriesSelectBox = document.getElementById("countries")
+// function changeHandler () {
+//     console.log(countriesSelectBox.value)
+// }
