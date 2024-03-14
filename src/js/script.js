@@ -217,3 +217,25 @@
 // function changeHandler () {
 //     console.log(countriesSelectBox.value)
 // }
+
+// let countrySelectBox = document.querySelector(".countrySelect")
+// let citySelect = document.querySelector(".citySelect")
+// let countriesData = {
+//     Iran:["Tehran" , "Sari" , "Zanjan" , "Esfahan" , "Rasht"] ,
+//     Usa:["La" , "California" , "Florida" , "Chicago" , "Havana"] ,
+//     Korea:["Seoul" , "Daegu" , "Busan" , "Incheon" , "Ulsan"]
+// }
+// countrySelectBox.addEventListener("change" , function () {
+//     if (countrySelectBox.value === "Please Select") {
+//         citySelect.innerHTML = ""
+//         citySelect.innerHTML += "<option>Select city</option>"
+//     }else {
+//         let mainCountryName = countrySelectBox.value
+//         let mainCountryCities = countriesData[mainCountryName]
+//         citySelect.innerHTML = ""
+//         mainCountryCities.forEach(function (city) {
+//             citySelect.innerHTML += "<option>" + city + "</option>"
+//         })
+//     }
+// })
+

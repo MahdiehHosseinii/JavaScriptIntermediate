@@ -6,6 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="src/css/styles.css" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
     <title>JS</title>
 </head>
 <body>
@@ -81,13 +85,45 @@
         <p class="message">not registered <a>create an account</a></p>
     </div>
 </div>-->
-<h1 align="center">| Sabzlearn JS |</h1>
+<!--<h1 align="center">| Sabzlearn JS |</h1>
 <select id="countries" onchange="changeHandler()">
     <option value="Iran">Iran</option>
     <option value="Korea">Korea</option>
     <option value="Usa">Usa</option>
     <option value="Turkey">Turkey</option>
-</select>
+</select>-->
+<div class="container">
+    <div class="col-md-6 box">
+        <input class="fnameInput" placeholder="First Name" />
+    </div>
+
+    <div class="col-md-6 box">
+        <input class="lnameInput" placeholder="Last Name" />
+    </div>
+    <div class="col-md-6 box">
+        <input class="phoneInput" placeholder="Phone Number" />
+    </div>
+    <div class="col-md-6 box">
+        <input class="emailInput" placeholder="Email" />
+    </div>
+    <div class="col-md-6 box">
+        <select class="countrySelect">
+            <option value="Please Select">Please Select ...</option>
+            <option class="option" value="Iran">Iran</option>
+            <option class="option" value="Usa">United state</option>
+            <option class="option" value="Korea">Korea</option>
+        </select>
+    </div>
+    <div class="col-md-6 box">
+        <select class="citySelect">
+            <option value="-1">Select City ...</option>
+        </select>
+    </div>
+    <div class="col-md-12 box">
+        <button class="btn">Book a ticket</button>
+    </div>
+</div>
+
 <script src="src/js/script.js"></script>
 </body>
 </html>
