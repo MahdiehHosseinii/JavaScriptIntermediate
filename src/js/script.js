@@ -239,3 +239,29 @@
 //     }
 // })
 
+// let citiesData = {
+//     Tehran:{city: "Tehran" , temp:12 , weather: "sunny" , humidity: "20%" , windSpeed:"3.2 km/h"} ,
+//     Shiraz:{city: "Shiraz" , temp:17 , weather: "sunny" , humidity:"13%" , windSpeed:"1.4 km/h"} ,
+//     Sari:{city: "Sari" , temp:10 , weather: "rainy" , humidity:"50%" , windSpeed:"0.3 km/h"} ,
+//     Zanjan:{city: "Zanjan" , temp:2 , weather: "windy" , humidity:"10%" , windSpeed:"6.7 km/h"} ,
+//     Rasht:{city: "Rasht" , temp:11 , weather: "rainy" , humidity:"67%" , windSpeed:"2.6 km/h"}
+// }
+// let $ = document
+// let searchBtn = $.getElementById("search")
+// let searchBar = $.querySelector(".search-bar")
+// searchBtn.addEventListener("click" , function (){
+//     let searchBarValue = searchBar.value
+//     let mainCityDatas = citiesData[searchBarValue]
+//     console.log(mainCityDatas)
+//     if (mainCityDatas) {
+//         $.querySelector(".city").innerHTML ="weather in " + mainCityDatas.city
+//         $.querySelector(".temp").innerHTML = mainCityDatas.temp + "C°"
+//         $.querySelector(".description").innerHTML = mainCityDatas.weather
+//         $.querySelector(".humidity").innerHTML = "Humidity: " + mainCityDatas.humidity
+//         $.querySelector(".wind").innerHTML = "windSpeed: " + mainCityDatas.windSpeed
+//         $.querySelector(".weather").classList.remove("loading")
+//     }else {
+//         alert("not correct")
+//     }
+// })
+
