@@ -193,8 +193,8 @@
 
 // let h1Elem = document.getElementById("title")
 // h1Elem.addEventListener("click" , function () {
-    // h1Elem.classList.add ("red")
-    // h1Elem.classList.remove("sm-font")
+// h1Elem.classList.add ("red")
+// h1Elem.classList.remove("sm-font")
 //     h1Elem.classList.toggle("red")
 // })
 
@@ -299,12 +299,12 @@
 //     let secondLiTag = document.createElement("li")
 //     newLiTag.innerHTML = "products"
 //     secondLiTag.innerHTML = "users"
-    // ulElem.append(newLiTag)
-    // ulElem.appendChild(newLiTag)
-    // ulElem.append("products")
-    // ulElem.appendChild("products")
-    // ulElem.append(newLiTag , secondLiTag)
-    // ulElem.appendChild(newLiTag , secondLiTag)
+// ulElem.append(newLiTag)
+// ulElem.appendChild(newLiTag)
+// ulElem.append("products")
+// ulElem.appendChild("products")
+// ulElem.append(newLiTag , secondLiTag)
+// ulElem.appendChild(newLiTag , secondLiTag)
 // }
 
 // function keyDownHandler () {
@@ -325,15 +325,30 @@ const result = $.querySelector(".result")
 const convertButton = $.querySelector(".convertButton")
 const resetButton = $.querySelector(".resetButton")
 const changeButton = $.querySelector(".changeButton")
-function convert () {
+
+function convert() {
 
 }
-function reset () {
 
+function reset() {
+    result.innerHTML = ""
+    converter.value = ""
 }
-function swap () {
 
+function swap() {
+    if (firstValue.innerHTML === "°C") {
+        firstValue.innerHTML = "°F"
+        secondValue.innerHTML = "°C"
+        converter.setAttribute("placeholder", "°F")
+        document.title = "SalzLearn| Js | °F to °C"
+    } else {
+        firstValue.innerHTML = "°C"
+        secondValue.innerHTML = "°F"
+        converter.setAttribute("placeholder", "°C")
+        document.title = "SalzLearn| Js | °C to °F"
+    }
 }
-convertButton.addEventListener("click" , convert)
-resetButton.addEventListener("click" , reset)
-changeButton.addEventListener("click" , swap)
+
+convertButton.addEventListener("click", convert)
+resetButton.addEventListener("click", reset)
+changeButton.addEventListener("click", swap)
