@@ -327,7 +327,20 @@ const resetButton = $.querySelector(".resetButton")
 const changeButton = $.querySelector(".changeButton")
 
 function convert() {
-
+    if (converter.value === "") {
+        result.innerHTML = "insert correct value!"
+        result.style.color = "#993300"
+    } else {
+        if (firstValue.innerHTML === "°C") {
+            let resultValue = (converter.value * 1 / 8) + 32
+            result.innerHTML = converter.value + "°C to " + resultValue + "°F"
+            result.style.color = "rgb(255, 255, 102)"
+        } else {
+            let resultValue = (converter.value - 32) * 5 / 9
+            result.innerHTML = converter.value + "°F to " + resultValue.toFixed(2) + "°C"
+            result.style.color = "rgb(255, 255, 102)"
+        }
+    }
 }
 
 function reset() {
