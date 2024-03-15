@@ -293,4 +293,18 @@
 //     }
 // })
 
+// let ulElem = document.querySelector("ul")
+// function addNewLi () {
+//     let newLiTag = document.createElement("li")
+//     let secondLiTag = document.createElement("li")
+//     newLiTag.innerHTML = "products"
+//     secondLiTag.innerHTML = "users"
+    // ulElem.append(newLiTag)
+    // ulElem.appendChild(newLiTag)
+    // ulElem.append("products")
+    // ulElem.appendChild("products")
+    // ulElem.append(newLiTag , secondLiTag)
+    // ulElem.appendChild(newLiTag , secondLiTag)
+// }
+
 
