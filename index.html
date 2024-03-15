@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="src/css/styles.css" rel="stylesheet">
-    <title>JS</title>
+    <title>SalzLearn| Js | °C to °F</title>
 </head>
 <body>
 <!--<h1 align="center" id="title"> "Sabzlearn JS" </h1>
@@ -149,7 +149,22 @@
     <li>Contact</li>
     <li>Services</li>
 </ul>-->
-<input type="text" value="username..." onkeydown="keyDownHandler()" onkeypress="keyPressHandler()" onkeyup="keyUpHandler()">
+<!--<input type="text" value="username..." onkeydown="keyDownHandler()" onkeypress="keyPressHandler()" onkeyup="keyUpHandler()">-->
+<header>
+    <label for="converter">Converter <span class="C">°C</span> to <span class="F">°F</span></label>
+</header>
+
+<div>
+    <input type="text" id="converter" placeholder="°C">
+</div>
+
+<p class="result"></p>
+
+<div id="buttons">
+    <button class="convertButton">Convert</button>
+    <button class="resetButton">Reset</button>
+    <button class="changeButton">Change</button>
+</div>
 
 <script src="src/js/script.js"></script>
 </body>
