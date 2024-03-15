@@ -307,4 +307,14 @@
     // ulElem.appendChild(newLiTag , secondLiTag)
 // }
 
+// function keyDownHandler () {
+//     console.log("key down")
+// }
+// function keyPressHandler () {
+//     console.log("key press")
+// }
+// function keyUpHandler () {
+//     console.log("key up")
+// }
+
 
