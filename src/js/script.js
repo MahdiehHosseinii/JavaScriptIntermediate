@@ -384,11 +384,17 @@
 //     inputElem.removeAttribute("placeholder")
 // }
 
-let btn = document.getElementById("btn")
-btn.onclick = showLog
-function showLog () {
-    console.log("clicked")
-}
-btn.onclick = function () {
-    console.log("clicked")
-}
+// let btn = document.getElementById("btn")
+// btn.onclick = showLog
+// function showLog () {
+//     console.log("clicked")
+// }
+// btn.onclick = function () {
+//     console.log("clicked")
+// }
+
+let loginForm = document.getElementById("login-form")
+loginForm.addEventListener("submit", function () {
+    console.log("submit shod")
+})
+
