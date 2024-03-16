@@ -204,7 +204,7 @@ h1.temp {
     left: 20px;
 }*/
 
-* {
+/* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -271,20 +271,17 @@ button:hover {
     color: var(--color);
     box-shadow: 3px 3px 10px var(--color2);
 }
-
-/* ------> Media queries <------ */
 @media screen and (max-width: 500px) {
-    /*Smartphones*/
     label {
         font-size: 35px;
     }
 }
 
 @media screen and (max-width: 1000px) {
-    /*Bigger screens*/
     button {
         display: flex;
         margin-bottom: 20px;
         justify-content: center;
     }
-}
+}*/
+

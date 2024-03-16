@@ -317,51 +317,63 @@
 //     console.log("key up")
 // }
 
-let $ = document
-const firstValue = $.querySelector(".C")
-const secondValue = $.querySelector(".F")
-const converter = $.querySelector("#converter")
-const result = $.querySelector(".result")
-const convertButton = $.querySelector(".convertButton")
-const resetButton = $.querySelector(".resetButton")
-const changeButton = $.querySelector(".changeButton")
+// let $ = document
+// const firstValue = $.querySelector(".C")
+// const secondValue = $.querySelector(".F")
+// const converter = $.querySelector("#converter")
+// const result = $.querySelector(".result")
+// const convertButton = $.querySelector(".convertButton")
+// const resetButton = $.querySelector(".resetButton")
+// const changeButton = $.querySelector(".changeButton")
+//
+// function convert() {
+//     if (converter.value === "") {
+//         result.innerHTML = "insert correct value!"
+//         result.style.color = "#993300"
+//     } else {
+//         if (firstValue.innerHTML === "°C") {
+//             let resultValue = (converter.value * 1 / 8) + 32
+//             result.innerHTML = converter.value + "°C to " + resultValue + "°F"
+//             result.style.color = "rgb(255, 255, 102)"
+//         } else {
+//             let resultValue = (converter.value - 32) * 5 / 9
+//             result.innerHTML = converter.value + "°F to " + resultValue.toFixed(2) + "°C"
+//             result.style.color = "rgb(255, 255, 102)"
+//         }
+//     }
+// }
+//
+// function reset() {
+//     result.innerHTML = ""
+//     converter.value = ""
+// }
+//
+// function swap() {
+//     if (firstValue.innerHTML === "°C") {
+//         firstValue.innerHTML = "°F"
+//         secondValue.innerHTML = "°C"
+//         converter.setAttribute("placeholder", "°F")
+//         document.title = "SalzLearn| Js | °F to °C"
+//     } else {
+//         firstValue.innerHTML = "°C"
+//         secondValue.innerHTML = "°F"
+//         converter.setAttribute("placeholder", "°C")
+//         document.title = "SalzLearn| Js | °C to °F"
+//     }
+// }
+//
+// convertButton.addEventListener("click", convert)
+// resetButton.addEventListener("click", reset)
+// changeButton.addEventListener("click", swap)
 
-function convert() {
-    if (converter.value === "") {
-        result.innerHTML = "insert correct value!"
-        result.style.color = "#993300"
-    } else {
-        if (firstValue.innerHTML === "°C") {
-            let resultValue = (converter.value * 1 / 8) + 32
-            result.innerHTML = converter.value + "°C to " + resultValue + "°F"
-            result.style.color = "rgb(255, 255, 102)"
-        } else {
-            let resultValue = (converter.value - 32) * 5 / 9
-            result.innerHTML = converter.value + "°F to " + resultValue.toFixed(2) + "°C"
-            result.style.color = "rgb(255, 255, 102)"
-        }
-    }
-}
+// let h1Elem = document.getElementById("title")
+// console.log(h1Elem.className)
+// console.log(h1Elem.getAttribute("class"))
 
-function reset() {
-    result.innerHTML = ""
-    converter.value = ""
-}
+// let userInput = document.getElementById("input")
+// console.log(userInput.value)
+// console.log(userInput.getAttribute(name))
+// userInput.location = "Iran"
+// console.log(userInput.location)
+// console.log(userInput.getAttribute("location"))
 
-function swap() {
-    if (firstValue.innerHTML === "°C") {
-        firstValue.innerHTML = "°F"
-        secondValue.innerHTML = "°C"
-        converter.setAttribute("placeholder", "°F")
-        document.title = "SalzLearn| Js | °F to °C"
-    } else {
-        firstValue.innerHTML = "°C"
-        secondValue.innerHTML = "°F"
-        converter.setAttribute("placeholder", "°C")
-        document.title = "SalzLearn| Js | °C to °F"
-    }
-}
-
-convertButton.addEventListener("click", convert)
-resetButton.addEventListener("click", reset)
-changeButton.addEventListener("click", swap)
