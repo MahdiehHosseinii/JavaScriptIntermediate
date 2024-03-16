@@ -377,3 +377,10 @@
 // console.log(userInput.location)
 // console.log(userInput.getAttribute("location"))
 
+// let inputElem = document.getElementById("input")
+// console.log(inputElem.hasAttribute("placeholder"))
+
+// function removeatthandler () {
+//     inputElem.removeAttribute("placeholder")
+// }
+
