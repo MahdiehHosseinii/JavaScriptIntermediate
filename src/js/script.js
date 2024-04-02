@@ -393,8 +393,19 @@
 //     console.log("clicked")
 // }
 
-let loginForm = document.getElementById("login-form")
-loginForm.addEventListener("submit", function () {
-    console.log("submit shod")
+// let loginForm = document.getElementById("login-form")
+// loginForm.addEventListener("submit", function () {
+//     console.log("submit shod")
+// })
+
+let logBtn = document.getElementById("btn")
+let usernameInput = document.getElementById("username")
+logBtn.addEventListener("click" , function (event){
+    console.log(event)
 })
+usernameInput.addEventListener("keydown" , function (event){
+    console.log(event)
+})
+
+
 
