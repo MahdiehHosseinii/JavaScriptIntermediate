@@ -398,12 +398,22 @@
 //     console.log("submit shod")
 // })
 
-let logBtn = document.getElementById("btn")
+// let logBtn = document.getElementById("btn")
+// let usernameInput = document.getElementById("username")
+// logBtn.addEventListener("click" , function (event){
+//     console.log(event)
+// })
+// usernameInput.addEventListener("keydown" , function (event){
+//     console.log(event)
+// })
+
+let loginForm = document.getElementById("form")
 let usernameInput = document.getElementById("username")
-logBtn.addEventListener("click" , function (event){
+loginForm.addEventListener("submit", function (event) {
+    event.preventDefault()
     console.log(event)
 })
-usernameInput.addEventListener("keydown" , function (event){
+usernameInput.addEventListener("keydown", function (event) {
     console.log(event)
 })
 
