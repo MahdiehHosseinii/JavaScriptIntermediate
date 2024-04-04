@@ -443,10 +443,37 @@
 //     codeElem.innerHTML = eventCode
 // })
 
-let h1Elem = document.getElementById("title")
-console.log(h1Elem.nodeName)
-console.log(h1Elem.nodeType)
-console.log(h1Elem.nodeValue)
+// let h1Elem = document.getElementById("title")
+// console.log(h1Elem.nodeName)
+// console.log(h1Elem.nodeType)
+// console.log(h1Elem.nodeValue)
+
+let head1 = document.getElementById("head1")
+let head2 = document.getElementById("head2")
+let head3 = document.getElementById("head3")
+let head4 = document.getElementById("head4")
+let head5 = document.getElementById("head5")
+let head6 = document.getElementById("head6")
+let listItem = document.getElementsByClassName("list-item")
+let list = document.getElementById("list")
+console.log(head3.parentNode)
+console.log(head3.parentElement)
+console.log(head3.previousElementSibling)
+console.log(head3.nextElementSibling)
+console.log(listItem[3].nextSibling)
+console.log(listItem[2].nextElementSibling)
+console.log(listItem[2].previousElementSibling)
+console.log(listItem[2].previousSibling.previousSibling)
+console.log(list.childElementCount)
+console.log(list.children[3])
+console.log(list.childNodes)
+console.log(list.hasChildNodes())
+console.log(list.firstChild)
+console.log(list.lastChild)
+console.log(list.firstElementChild)
+console.log(list.lastElementChild)
+
+
 
 
 
