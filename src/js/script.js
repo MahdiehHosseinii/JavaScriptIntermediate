@@ -473,26 +473,33 @@
 // console.log(list.firstElementChild)
 // console.log(list.lastElementChild)
 
-let $ = document;
+// let $ = document;
+//
+// function _id(id_name) {
+//     return $.getElementById(id_name);
+// }
+//
+// function _class(class_name) {
+//     return $.getElementsByClassName(class_name);
+// }
+//
+// let togglePassword = _class("toggle-password");
+// let passwordField = _id("password-field");
+// togglePassword[0].addEventListener("click", function () {
+//     if (passwordField.type === "text") {
+//         passwordField.type = "password";
+//         togglePassword[0].classList.remove("active");
+//     } else {
+//         passwordField.type = "text";
+//         togglePassword[0].classList.add("active");
+//     }
+// })
 
-function _id(id_name) {
-    return $.getElementById(id_name);
-}
-
-function _class(class_name) {
-    return $.getElementsByClassName(class_name);
-}
-
-let togglePassword = _class("toggle-password");
-let passwordField = _id("password-field");
-togglePassword[0].addEventListener("click", function () {
-    if (passwordField.type === "text") {
-        passwordField.type = "password";
-        togglePassword[0].classList.remove("active");
-    } else {
-        passwordField.type = "text";
-        togglePassword[0].classList.add("active");
-    }
+let title = document.getElementById("title")
+let btn = document.getElementById("button")
+let titleText = document.getElementsByClassName("text")
+btn.addEventListener("click" , function (){
+    titleText[0].remove()
 })
 
 
