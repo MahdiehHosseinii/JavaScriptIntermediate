@@ -498,8 +498,14 @@
 let title = document.getElementById("title")
 let btn = document.getElementById("button")
 let titleText = document.getElementsByClassName("text")
+let listItems = document.querySelectorAll(".list-item")
 btn.addEventListener("click" , function (){
     titleText[0].remove()
+})
+listItems.forEach(function (li) {
+    li.addEventListener("click" , function (event) {
+        event.target.parentElement.remove()
+    })
 })
 
 
