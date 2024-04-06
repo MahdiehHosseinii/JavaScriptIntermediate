@@ -451,7 +451,8 @@ body {
 .form .form-element .password-policies>div.active {
     color: #111;
 }*/
-body {
+
+/*body {
     background: #353f5b;
 }
 .container {
@@ -489,4 +490,6 @@ input[type="text"]:focus {
 
 .filtered{
     display: none !important;
-}
+}*/
+
+
