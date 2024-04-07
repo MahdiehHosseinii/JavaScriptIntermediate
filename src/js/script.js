@@ -545,19 +545,23 @@
 //     console.log("right click")
 // }
 
-let editorElem = document.getElementById("editor")
-function copyHandler (event) {
-    event.preventDefault()
+// let editorElem = document.getElementById("editor")
+// function copyHandler (event) {
+//     event.preventDefault()
+// }
+// function cutHandler (event) {
+//     event.preventDefault()
+// }
+// function pasteHandler (event) {
+//     event.preventDefault()
+// }
+// editorElem.addEventListener("copy" , copyHandler)
+// editorElem.addEventListener("cut" , cutHandler)
+// editorElem.addEventListener("paste" , pasteHandler)
+
+function clickHandler(event) {
+    console.log(event)
 }
-function cutHandler (event) {
-    event.preventDefault()
-}
-function pasteHandler (event) {
-    event.preventDefault()
-}
-editorElem.addEventListener("copy" , copyHandler)
-editorElem.addEventListener("cut" , cutHandler)
-editorElem.addEventListener("paste" , pasteHandler)
 
 
 
