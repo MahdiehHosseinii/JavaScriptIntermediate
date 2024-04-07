@@ -538,12 +538,28 @@
 //     }
 // })
 
-function clickHandler () {
-    console.log("click")
+// function clickHandler () {
+//     console.log("click")
+// }
+// function contextMenuHandler () {
+//     console.log("right click")
+// }
+
+let editorElem = document.getElementById("editor")
+function copyHandler (event) {
+    event.preventDefault()
 }
-function contextMenuHandler () {
-    console.log("right click")
+function cutHandler (event) {
+    event.preventDefault()
 }
+function pasteHandler (event) {
+    event.preventDefault()
+}
+editorElem.addEventListener("copy" , copyHandler)
+editorElem.addEventListener("cut" , cutHandler)
+editorElem.addEventListener("paste" , pasteHandler)
+
+
 
 
 
