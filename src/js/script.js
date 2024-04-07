@@ -587,9 +587,12 @@
 // document.body.addEventListener("click", hideContextMenu)
 // document.body.addEventListener("keydown", keyDownHandler)
 
-function loadHandler() {
-    console.log("loaded")
-}
+// function loadHandler() {
+//     console.log("loaded")
+// }
+document.addEventListener("DOMContentLoaded" , function () {
+    console.log("DOM content loaded")
+})
 
 
 
