@@ -602,9 +602,23 @@
 //     loaderElem.className += " hidden"
 // })
 
-function unloadHandler() {
-    console.log("unloaded")
+// function unloadHandler() {
+//     console.log("unloaded")
+// }
+
+const boxElem = document.getElementById("box")
+const btnElem = document.getElementById("btn")
+
+function mouseMoveHandler() {
+    console.log("moved")
 }
+
+function removeHandler() {
+    boxElem.removeEventListener("mousemove", mouseMoveHandler)
+}
+
+btnElem.addEventListener("click", removeHandler)
+boxElem.addEventListener("mousemove", mouseMoveHandler)
 
 
 
