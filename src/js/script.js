@@ -596,11 +596,15 @@
 //     console.log("DOM content loaded")
 // })
 
-const loaderElem = document.querySelector(".loader")
-window.addEventListener("load" , function () {
-    loaderElem.classList.add("hidden")
-    loaderElem.className += " hidden"
-})
+// const loaderElem = document.querySelector(".loader")
+// window.addEventListener("load" , function () {
+//     loaderElem.classList.add("hidden")
+//     loaderElem.className += " hidden"
+// })
+
+function unloadHandler() {
+    console.log("unloaded")
+}
 
 
 

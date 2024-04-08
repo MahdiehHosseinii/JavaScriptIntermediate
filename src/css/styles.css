@@ -546,7 +546,7 @@ ul {
     color: red;
 }*/
 
-.loader {
+/*.loader {
     position: fixed;
     z-index: 99;
     top: 0;
@@ -588,5 +588,5 @@ ul {
     height: 100px;
     border: 1px solid black;
     margin: 10px;
-}
+}*/
 
