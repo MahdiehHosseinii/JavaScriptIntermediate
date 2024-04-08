@@ -606,19 +606,23 @@
 //     console.log("unloaded")
 // }
 
-const boxElem = document.getElementById("box")
-const btnElem = document.getElementById("btn")
+// const boxElem = document.getElementById("box")
+// const btnElem = document.getElementById("btn")
+//
+// function mouseMoveHandler() {
+//     console.log("moved")
+// }
+//
+// function removeHandler() {
+//     boxElem.removeEventListener("mousemove", mouseMoveHandler)
+// }
+//
+// btnElem.addEventListener("click", removeHandler)
+// boxElem.addEventListener("mousemove", mouseMoveHandler)
 
-function mouseMoveHandler() {
-    console.log("moved")
+function selectHandler() {
+    console.log("selected")
 }
-
-function removeHandler() {
-    boxElem.removeEventListener("mousemove", mouseMoveHandler)
-}
-
-btnElem.addEventListener("click", removeHandler)
-boxElem.addEventListener("mousemove", mouseMoveHandler)
 
 
 
