@@ -620,8 +620,12 @@
 // btnElem.addEventListener("click", removeHandler)
 // boxElem.addEventListener("mousemove", mouseMoveHandler)
 
-function selectHandler() {
-    console.log("selected")
+// function selectHandler() {
+//     console.log("selected")
+// }
+
+function touchHandler() {
+    console.log("touched")
 }
 
 
