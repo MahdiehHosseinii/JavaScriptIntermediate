@@ -590,8 +590,16 @@
 // function loadHandler() {
 //     console.log("loaded")
 // }
-document.addEventListener("DOMContentLoaded" , function () {
-    console.log("DOM content loaded")
+
+
+// document.addEventListener("DOMContentLoaded" , function () {
+//     console.log("DOM content loaded")
+// })
+
+const loaderElem = document.querySelector(".loader")
+window.addEventListener("load" , function () {
+    loaderElem.classList.add("hidden")
+    loaderElem.className += " hidden"
 })
 
 
