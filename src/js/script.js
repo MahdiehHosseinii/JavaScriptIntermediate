@@ -624,9 +624,11 @@
 //     console.log("selected")
 // }
 
-function touchHandler() {
-    console.log("touched")
-}
+// function touchHandler() {
+//     console.log("touched")
+// }
+
+
 
 
 
