@@ -628,15 +628,45 @@
 //     console.log("touched")
 // }
 
+// let $ = document
+//
+// const inputElem = $.querySelector('input')
+// const spanElem = $.querySelector('.counter')
+// const inputMaxLength = inputElem.getAttribute('maxlength')
+//
+// inputElem.addEventListener('keyup', function () {
+//     spanElem.innerHTML = inputMaxLength - inputElem.value.length
+// })
+
 let $ = document
+const button = $.querySelector("button")
+const modalParent = $.querySelector(".modal-parent")
+const x = $.querySelector(".X")
+const section = $.querySelector("section")
 
-const inputElem = $.querySelector('input')
-const spanElem = $.querySelector('.counter')
-const inputMaxLength = inputElem.getAttribute('maxlength')
+function showModal() {
+    modalParent.style.display = "block"
+    section.style.filter = "blur(6px)"
+    button.blur()
+}
 
-inputElem.addEventListener('keyup', function () {
-    spanElem.innerHTML = inputMaxLength - inputElem.value.length
-})
+function closeModal() {
+    modalParent.style.display = "none"
+    section.style.filter = "blur(0px)"
+}
+
+function closeModalWithEsc(event) {
+    if (event.keyCode === 27) {
+        modalParent.style.display = "none"
+        section.style.filter = "blur(0px)"
+    }
+}
+
+button.addEventListener("click", showModal)
+x.addEventListener("click", closeModal)
+document.body.addEventListener("keyup", closeModalWithEsc)
+
+
 
 
 
