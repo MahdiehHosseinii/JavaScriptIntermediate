@@ -173,7 +173,7 @@
 //         passwordMessage.style.color = "red"
 //         passwordMessage.style.display = "block"
 //     }else {
-//         passwordMessage.innerHTML = "correct username value"
+//         passwordMessage.innerHTML = "correct password value"
 //         passwordMessage.style.color = "green"
 //     }
 // }
@@ -638,33 +638,53 @@
 //     spanElem.innerHTML = inputMaxLength - inputElem.value.length
 // })
 
+// let $ = document
+// const button = $.querySelector("button")
+// const modalParent = $.querySelector(".modal-parent")
+// const x = $.querySelector(".X")
+// const section = $.querySelector("section")
+//
+// function showModal() {
+//     modalParent.style.display = "block"
+//     section.style.filter = "blur(6px)"
+//     button.blur()
+// }
+//
+// function closeModal() {
+//     modalParent.style.display = "none"
+//     section.style.filter = "blur(0px)"
+// }
+//
+// function closeModalWithEsc(event) {
+//     if (event.keyCode === 27) {
+//         modalParent.style.display = "none"
+//         section.style.filter = "blur(0px)"
+//     }
+// }
+//
+// button.addEventListener("click", showModal)
+// x.addEventListener("click", closeModal)
+// document.body.addEventListener("keyup", closeModalWithEsc)
+
+//NoteApp
 let $ = document
-const button = $.querySelector("button")
-const modalParent = $.querySelector(".modal-parent")
-const x = $.querySelector(".X")
-const section = $.querySelector("section")
+const inputElem = $.querySelector("#input-field")
+const btnSaveElem = $.querySelector("#btn-save")
+const btnDeleteElem = $.querySelector("#btn-delete")
+const colorsBox = $.querySelectorAll(".color-box")
+const notesContainer = $.querySelector("#listed")
+colorsBox.forEach(function (colorBox) {
+    colorBox.addEventListener("click" , function (event) {
+        let mainColor = event.target.style.backgroundColor
+        inputElem.style.backgroundColor = mainColor
+    })
+})
+btnDeleteElem.addEventListener("click" , function () {
+    inputElem.value = ""
+    inputElem.style.backgroundColor = "#ffff"
+})
 
-function showModal() {
-    modalParent.style.display = "block"
-    section.style.filter = "blur(6px)"
-    button.blur()
-}
 
-function closeModal() {
-    modalParent.style.display = "none"
-    section.style.filter = "blur(0px)"
-}
-
-function closeModalWithEsc(event) {
-    if (event.keyCode === 27) {
-        modalParent.style.display = "none"
-        section.style.filter = "blur(0px)"
-    }
-}
-
-button.addEventListener("click", showModal)
-x.addEventListener("click", closeModal)
-document.body.addEventListener("keyup", closeModalWithEsc)
 
 
 
