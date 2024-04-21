@@ -679,10 +679,29 @@ colorsBox.forEach(function (colorBox) {
         inputElem.style.backgroundColor = mainColor
     })
 })
+function generateNewNote () {
+    let newNoteDivElem = $.createElement("div")
+    newNoteDivElem.className = "card shadow-sm rounded"
+    let inputBg = inputElem.style.backgroundColor
+    newNoteDivElem.style.backgroundColor = inputBg
+    let newNotePElem = $.createElement("p")
+    newNotePElem.className = "card-text p-3"
+    newNotePElem.innerHTML = inputElem.value
+    newNoteDivElem.append(newNotePElem)
+    notesContainer.append(newNoteDivElem)
+    inputElem.value = ""
+    inputElem.style.backgroundColor = "#ffff"
+}
 btnDeleteElem.addEventListener("click" , function () {
     inputElem.value = ""
     inputElem.style.backgroundColor = "#ffff"
 })
+inputElem.addEventListener("keydown" , function (event) {
+    if (event.keyCode === 13) {
+        generateNewNote()
+    }
+})
+btnSaveElem.addEventListener("click" , generateNewNote)
 
 
 
