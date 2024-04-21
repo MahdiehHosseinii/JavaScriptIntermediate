@@ -674,16 +674,18 @@ const btnDeleteElem = $.querySelector("#btn-delete")
 const colorsBox = $.querySelectorAll(".color-box")
 const notesContainer = $.querySelector("#listed")
 colorsBox.forEach(function (colorBox) {
-    colorBox.addEventListener("click" , function (event) {
+    colorBox.addEventListener("click", function (event) {
         let mainColor = event.target.style.backgroundColor
         inputElem.style.backgroundColor = mainColor
     })
 })
-function generateNewNote () {
+
+function generateNewNote() {
     let newNoteDivElem = $.createElement("div")
     newNoteDivElem.className = "card shadow-sm rounded"
     let inputBg = inputElem.style.backgroundColor
     newNoteDivElem.style.backgroundColor = inputBg
+    newNoteDivElem.addEventListener("click", removeNote)
     let newNotePElem = $.createElement("p")
     newNotePElem.className = "card-text p-3"
     newNotePElem.innerHTML = inputElem.value
@@ -692,16 +694,23 @@ function generateNewNote () {
     inputElem.value = ""
     inputElem.style.backgroundColor = "#ffff"
 }
-btnDeleteElem.addEventListener("click" , function () {
+
+function removeNote(event) {
+    event.target.parentElement.remove()
+}
+
+btnDeleteElem.addEventListener("click", function () {
     inputElem.value = ""
     inputElem.style.backgroundColor = "#ffff"
 })
-inputElem.addEventListener("keydown" , function (event) {
+inputElem.addEventListener("keydown", function (event) {
     if (event.keyCode === 13) {
-        generateNewNote()
+        if (inputElem.value) {
+            generateNewNote()
+        }
     }
 })
-btnSaveElem.addEventListener("click" , generateNewNote)
+btnSaveElem.addEventListener("click", generateNewNote)
 
 
 
