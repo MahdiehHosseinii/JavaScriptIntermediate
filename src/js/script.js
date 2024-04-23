@@ -716,19 +716,26 @@
 //     console.log(event)
 // }
 
-const mainNav = document.getElementById("mainNav")
-const logoImg = document.querySelector("img")
-document.addEventListener("scroll" , function () {
-    if (document.documentElement.scrollTop > 0) {
-        mainNav.classList.add("bg-black")
-        mainNav.classList.add("txt-white")
-        logoImg.style.height = "64px"
-    }else {
-        logoImg.style.height = "84px"
-        mainNav.classList.remove("bg-black")
-        mainNav.classList.remove("txt-white")
-    }
-})
+// const mainNav = document.getElementById("mainNav")
+// const logoImg = document.querySelector("img")
+// document.addEventListener("scroll" , function () {
+//     if (document.documentElement.scrollTop > 0) {
+//         mainNav.classList.add("bg-black")
+//         mainNav.classList.add("txt-white")
+//         logoImg.style.height = "64px"
+//     }else {
+//         logoImg.style.height = "84px"
+//         mainNav.classList.remove("bg-black")
+//         mainNav.classList.remove("txt-white")
+//     }
+// })
+
+function scrollTopHandler() {
+    window.scrollTo(0 , 0)
+}
+function scrollDownHandler() {
+    window.scrollBy(0 , 50)
+}
 
 
 
