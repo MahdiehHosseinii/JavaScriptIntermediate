@@ -730,11 +730,15 @@
 //     }
 // })
 
-function scrollTopHandler() {
-    window.scrollTo(0 , 0)
-}
-function scrollDownHandler() {
-    window.scrollBy(0 , 50)
+// function scrollTopHandler() {
+//     window.scrollTo(0 , 0)
+// }
+// function scrollDownHandler() {
+//     window.scrollBy(0 , 50)
+// }
+
+function showDataId (event) {
+    console.log(event.target.dataset)
 }
 
 
