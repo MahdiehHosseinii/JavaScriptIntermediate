@@ -741,25 +741,74 @@
 //     console.log(event.target.dataset)
 // }
 
+// let audioElem = document.querySelector("audio")
+// let timeElem = document.querySelector("#time")
+// function playHandler () {
+//     audioElem.play()
+//     setInterval(function () {
+//         timeElem.innerHTML = "00:" + "0" + Math.floor(audioElem.currentTime)
+//     }, 1000)
+// }
+// function pauseHandler () {
+//     audioElem.pause()
+// }
+// function durationHandler () {
+//     console.log("duration" , audioElem.duration)
+// }
+// function playBackRateHandler() {
+//     audioElem.playbackRate = 2
+// }
+// function currentTimeHandler () {
+//     console.log("current time: " , Math.floor(audioElem.currentTime))
+// }
+
 let audioElem = document.querySelector("audio")
-let timeElem = document.querySelector("#time")
-function playHandler () {
+let musicSrc = [
+    "src/audio/InSeri.mp3",
+    "src/audio/Yadetim.mp3",
+    "src/audio/barMikhore.mp3"
+]
+let audioIndex = 0
+
+function previousMusicHandler() {
+    audioIndex--
+    if (audioIndex < 0) {
+        audioIndex = 2
+    }
+    audioElem.setAttribute("src", musicSrc[audioIndex])
+    playHandler()
+}
+
+function playHandler() {
     audioElem.play()
     setInterval(function () {
-        timeElem.innerHTML = "00:" + "0" + Math.floor(audioElem.currentTime)
+        console.log(audioElem.currentTime)
     }, 1000)
 }
-function pauseHandler () {
+
+function pauseHandler() {
     audioElem.pause()
 }
-function durationHandler () {
-    console.log("duration" , audioElem.duration)
+
+function nextMusicHandler() {
+    audioIndex++
+    if (audioIndex > musicSrc.length - 1) {
+        audioIndex = 0
+    }
+    audioElem.setAttribute("src", musicSrc[audioIndex])
+    playHandler()
 }
-function playBackRateHandler() {
+
+function speedHandler() {
     audioElem.playbackRate = 2
 }
-function currentTimeHandler () {
-    console.log("current time: " , Math.floor(audioElem.currentTime))
+
+function timeMinusMusicHandler() {
+    audioElem.currentTime -= 5
+}
+
+function timePlusMusicHandler() {
+    audioElem.currentTime += 5
 }
 
 
