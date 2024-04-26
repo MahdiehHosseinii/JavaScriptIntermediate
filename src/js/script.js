@@ -737,10 +737,30 @@
 //     window.scrollBy(0 , 50)
 // }
 
-function showDataId (event) {
-    console.log(event.target.dataset)
-}
+// function showDataId (event) {
+//     console.log(event.target.dataset)
+// }
 
+let audioElem = document.querySelector("audio")
+let timeElem = document.querySelector("#time")
+function playHandler () {
+    audioElem.play()
+    setInterval(function () {
+        timeElem.innerHTML = "00:" + "0" + Math.floor(audioElem.currentTime)
+    }, 1000)
+}
+function pauseHandler () {
+    audioElem.pause()
+}
+function durationHandler () {
+    console.log("duration" , audioElem.duration)
+}
+function playBackRateHandler() {
+    audioElem.playbackRate = 2
+}
+function currentTimeHandler () {
+    console.log("current time: " , Math.floor(audioElem.currentTime))
+}
 
 
 
