@@ -5,7 +5,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
     <link href="src/css/styles.css" rel="stylesheet">
     <title>SabzLearn</title>
 </head>
@@ -427,18 +430,16 @@
 <button onclick="nextMusicHandler()">next music</button>
 <button onclick="speedHandler()">2x</button>
 <button onclick="timePlusMusicHandler()">+5 music</button>-->
-<div class="bg-container">
+<!--<div class="bg-container">
     <img src="" alt="" id="background">
 </div>
 <div class="player-container">
-    <!-- Song -->
     <div class="img-container">
         <img src="" alt="" id="cover" class="active">
     </div>
     <h2 id="title"></h2>
     <h3 id="artist"></h3>
     <audio src=""></audio>
-    <!-- Progress -->
     <div class="progress-container" id="progress-container">
         <div class="progress" id="progress"></div>
         <div class="duration-wrapper">
@@ -446,12 +447,38 @@
             <span id="duration"></span>
         </div>
     </div>
-    <!-- Controls -->
     <div class="player-controls">
         <i class="fas fa-backward" id="prev" title="Previous"></i>
         <i class="fas fa-play main-button" id="play" title="Play"></i>
         <i class="fas fa-forward" id="next" title="Next"></i>
     </div>
+</div>-->
+<div class="container">
+    <br/>
+    <h1>لیست موزیک های جدید</h1>
+    <br/>
+    <br/>
+    <div class="main-music">
+        <img src="src/images/shayea.jpg" alt=""/>
+        <i class="fa fa-lg fa-play" data-name="html"></i>
+        <audio src="src/audio/InSeri.mp3" data-name="html"></audio>
+    </div>
+    <div class="main-music">
+        <img src="src/images/shayea2.jpg" alt=""/>
+        <i class="fa fa-lg fa-play" data-name="bazar"></i>
+        <audio src="src/audio/barMikhore.mp3" data-name="bazar"></audio>
+    </div>
+    <div class="main-music">
+        <img src="src/images/shayea3.jpg" alt=""/>
+        <i class="fa fa-lg fa-play" data-name="kar"></i>
+        <audio src="src/audio/Yadetim.mp3" data-name="kar"></audio>
+    </div>
+    <div class="main-music">
+        <img src="src/images/mahyar.jpg" alt=""/>
+        <i class="fa fa-lg fa-play" data-name="karyabi"></i>
+        <audio src="src/audio/Kerm.mp3" data-name="karyabi"></audio>
+    </div>
+    <br/><br/>
 </div>
 
 <script src="src/js/script.js"></script>
