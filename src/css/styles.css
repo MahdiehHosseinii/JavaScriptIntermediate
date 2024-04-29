@@ -1235,8 +1235,13 @@ h1 {
     border-radius: 10px;
     color: #fff;
     visibility: hidden;
-}/*
+}*/
 
+.drop {
+    width: 200px;
+    height: 235px;
+    border: 8px solid lightblue;
+}
 
 
 
