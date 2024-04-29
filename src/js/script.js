@@ -965,22 +965,24 @@
 // music.addEventListener("timeupdate", updateProgressBar);
 // progressContainer.addEventListener("click", setProgressBar);
 
-let $ = document
-const players = $.querySelectorAll(".fa-play")
-const audios = $.querySelectorAll("audio")
-let musicName;
-players.forEach(function (player) {
-    player.addEventListener("click" , function (event) {
-        musicName = event.target.dataset.name
-        audios.forEach(function (audio) {
-            if (audio.dataset.name === musicName) {
-                audio.play()
-            } else {
-                audio.pause()
-            }
-        })
-    })
-})
+// let $ = document
+// const players = $.querySelectorAll(".fa-play")
+// const audios = $.querySelectorAll("audio")
+// let musicName;
+// players.forEach(function (player) {
+//     player.addEventListener("click" , function (event) {
+//         musicName = event.target.dataset.name
+//         audios.forEach(function (audio) {
+//             if (audio.dataset.name === musicName) {
+//                 audio.play()
+//             } else {
+//                 audio.pause()
+//             }
+//         })
+//     })
+// })
+
+console.log(document.querySelector("h1"))
 
 
 

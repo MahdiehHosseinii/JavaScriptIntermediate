@@ -1179,7 +1179,7 @@ h3 {
     }
 }*/
 
-* {
+/* * {
     margin: 0;
     padding: 0;
     direction: rtl;
@@ -1235,7 +1235,8 @@ h1 {
     border-radius: 10px;
     color: #fff;
     visibility: hidden;
-}
+}/*
+
 
 
 
