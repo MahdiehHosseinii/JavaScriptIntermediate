@@ -984,19 +984,29 @@
 
 // console.log(document.querySelector("h1"))
 
-function dragStartHandler(event) {
-    event.dataTransfer.setData("elemId", event.target.id)
-}
+// function dragStartHandler(event) {
+//     event.dataTransfer.setData("elemId", event.target.id)
+// }
+//
+// function dropHandler(event) {
+//     let targetId = event.dataTransfer.getData("elemId")
+//     let targetElem = document.getElementById(targetId)
+//     event.target.append(targetElem)
+// }
+//
+// function dragOverHandler(event) {
+//     event.preventDefault()
+// }
 
-function dropHandler(event) {
-    let targetId = event.dataTransfer.getData("elemId")
-    let targetElem = document.getElementById(targetId)
-    event.target.append(targetElem)
-}
+let $ = document
+const newTodo = $.getElementById("add_btn")
+const modalInput = $.querySelector(".modal")
 
-function dragOverHandler(event) {
-    event.preventDefault()
-}
+
+
+newTodo.addEventListener("click" , function () {
+    modalInput.style.display = "block"
+})
 
 
 
