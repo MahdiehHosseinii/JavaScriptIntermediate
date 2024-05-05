@@ -1243,7 +1243,7 @@ h1 {
     border: 8px solid lightblue;
 }*/
 
-* {
+/* * {
     box-sizing: border-box;
 }
 
@@ -1326,8 +1326,6 @@ body {
     color: #343444;
 }
 
-/* modal */
-
 .close-modal {
     background: none;
     border: none;
@@ -1390,7 +1388,9 @@ body {
     color: #f3f3f3;
     font-size: 1.25rem;
     border: none;
-}
+}*/
+
+
 
 
 

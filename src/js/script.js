@@ -998,15 +998,27 @@
 //     event.preventDefault()
 // }
 
-let $ = document
-const newTodo = $.getElementById("add_btn")
-const modalInput = $.querySelector(".modal")
+// let $ = document
+// const newTodo = $.getElementById("add_btn")
+// const modalInput = $.querySelector(".modal")
+//
+//
+//
+// newTodo.addEventListener("click" , function () {
+//     modalInput.style.display = "block"
+// })
 
-
-
-newTodo.addEventListener("click" , function () {
-    modalInput.style.display = "block"
-})
+function insertName () {
+    localStorage.setItem("name" , "amir")
+    console.log("Insert Name")
+}
+function getName () {
+    let localName = localStorage.getItem("name")
+    console.log(localName)
+}
+function cleanData () {
+    localStorage.clear()
+}
 
 
 
