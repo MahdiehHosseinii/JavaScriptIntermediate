@@ -1020,22 +1020,71 @@
 //     localStorage.clear()
 // }
 
-const switchElement = document.querySelector('.switch')
+// const switchElement = document.querySelector('.switch')
+//
+// switchElement.addEventListener('click', function () {
+//     document.body.classList.toggle("dark")
+//     if (document.body.className.includes("dark")) {
+//         localStorage.setItem("theme", "dark")
+//     } else {
+//         localStorage.setItem("theme", "light")
+//     }
+// })
+// window.onload = function () {
+//     let localStorageTheme = localStorage.getItem("theme")
+//     if (localStorageTheme === "dark") {
+//         document.body.classList.add("dark")
+//     }
+// }
 
-switchElement.addEventListener('click', function () {
-    document.body.classList.toggle("dark")
-    if (document.body.className.includes("dark")) {
-        localStorage.setItem("theme", "dark")
-    } else {
-        localStorage.setItem("theme", "light")
+let $ = document
+const inputElem = $.getElementById("itemInput")
+const addButton = $.getElementById("addButton")
+const clearButton = $.getElementById("clearButton")
+const todoListElem = $.getElementById("todoList")
+let todosArray = []
+
+function addNewTodo() {
+    let newTodoTitle = inputElem.value
+    let newTodoObj = {
+        id: todosArray.length + 1,
+        title: newTodoTitle,
+        complete: false
     }
-})
-window.onload = function () {
-    let localStorageTheme = localStorage.getItem("theme")
-    if (localStorageTheme === "dark") {
-        document.body.classList.add("dark")
-    }
+    inputElem.value = ""
+    todosArray.push(newTodoObj)
+    setLocalStorage(todosArray)
+    todosGenerator(todosArray)
 }
+
+function setLocalStorage(todosList) {
+    localStorage.setItem("todos", JSON.stringify(todosList))
+}
+
+function todosGenerator(todosList) {
+    let newTodoLiElem, newTodoLabelElem, newTodoCompleteBtn, newTodoDeleteBtn
+    todosList.forEach(function (todo) {
+        newTodoLiElem = $.createElement("li")
+        newTodoLiElem.className = "completed well"
+
+        newTodoLabelElem = $.createElement("label")
+        newTodoLabelElem.innerHTML = todo.title
+
+        newTodoCompleteBtn = $.createElement("button")
+        newTodoCompleteBtn.className = "btn btn-success"
+        newTodoCompleteBtn.innerHTML = "Complete"
+
+        newTodoDeleteBtn = $.createElement("button")
+        newTodoDeleteBtn.className = "btn btn-danger"
+        newTodoDeleteBtn.innerHTML = "Delete"
+
+        newTodoLiElem.append(newTodoLabelElem, newTodoCompleteBtn, newTodoDeleteBtn)
+
+        todoListElem.append(newTodoLiElem)
+    })
+}
+
+addButton.addEventListener("click", addNewTodo)
 
 
 

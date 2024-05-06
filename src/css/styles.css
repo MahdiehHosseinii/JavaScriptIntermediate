@@ -1390,8 +1390,7 @@ body {
     border: none;
 }*/
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
-
+/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 body {
     transition: 0.3s;
     margin: 0;
@@ -1662,6 +1661,23 @@ footer {
     .hero-image {
         display: none;
     }
+}*/
+
+#todoList label{
+    width: 80%;
+}
+#todoList li{
+    list-style-type: none;
+}
+.completed{
+
+}
+.uncompleted label{
+    color: #afa7a7;
+    text-decoration: line-through;
+}
+#todoList .btn{
+    margin-left: 10px;
 }
 
 
