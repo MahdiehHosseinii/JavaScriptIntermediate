@@ -1086,11 +1086,23 @@ function todosGenerator(todosList) {
         newTodoDeleteBtn = $.createElement('button')
         newTodoDeleteBtn.className = 'btn btn-danger'
         newTodoDeleteBtn.innerHTML = 'Delete'
+        newTodoDeleteBtn.setAttribute("onclick", "removeTodo (" + todo.id + ")")
 
         newTodoLiElem.append(newTodoLabelElem, newTodoCompleteBtn, newTodoDeleteBtn)
 
         todoListElem.append(newTodoLiElem)
     })
+}
+
+function removeTodo(todoId) {
+    let localStorageTodos = JSON.parse(localStorage.getItem("todos"))
+    todosArray = localStorageTodos
+    let mainTodoIndex = todosArray.findIndex(function (todo) {
+        return todo.id === todoId
+    })
+    todosArray.splice(mainTodoIndex, 1)
+    setLocalStorage(todosArray)
+    todosGenerator(todosArray)
 }
 
 function getLocalStorage() {
