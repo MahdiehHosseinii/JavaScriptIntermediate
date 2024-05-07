@@ -1204,33 +1204,39 @@
 // let boxElemHeight = getComputedStyle(boxElem).getPropertyValue("height")
 // console.log(boxElemHeight)
 
-let number = 12
-const pElem = document.querySelector("p")
-const inputElem = document.querySelector("input")
-const buttonElem = document.querySelector("button")
-
+// let number = 12
+// const pElem = document.querySelector("p")
+// const inputElem = document.querySelector("input")
+// const buttonElem = document.querySelector("button")
 // try {
 //     console.log(x)
 // } catch (err) {
 //     pElem.innerHTML = err.message
 // }
+// function checkValue() {
+//     try {
+//         if (inputElem.value.length > 8) {
+//             throw "too high"
+//         } else {
+//             throw "too low"
+//         }
+//     } catch (err) {
+//         pElem.innerHTML = err
+//     } finally {
+//         inputElem.value = ""
+//     }
+// }
+// buttonElem.addEventListener("click", checkValue)
 
-function checkValue() {
-    try {
-        if (inputElem.value.length > 8) {
-            throw "too high"
-        } else {
-            throw "too low"
-        }
-    } catch (err) {
-        pElem.innerHTML = err
-    } finally {
-        inputElem.value = ""
-    }
+const h1Elem = document.querySelector("h1")
+
+function styleHandler() {
+    // h1Elem.style.color = "red"
+    // h1Elem.style.backgroundColor = "pink"
+    // h1Elem.style.fontSize = "50px"
+    h1Elem.style.cssText = "color: red; background-color:pink; font-size:50px;"
 }
 
-
-buttonElem.addEventListener("click", checkValue)
 
 
 
