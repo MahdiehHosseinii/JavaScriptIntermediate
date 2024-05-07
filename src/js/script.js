@@ -1190,12 +1190,20 @@
 // divElem.addEventListener("animationiteration" , animationRepeatHandler)
 // divElem.addEventListener("animationend" , animationEndHandler)
 
-const rangeInput = document.querySelector("input")
-const container = document.querySelector(".container")
+// const rangeInput = document.querySelector("input")
+// const container = document.querySelector(".container")
+//
+// rangeInput.addEventListener("change", function (event) {
+//     container.style.filter = "brightness(" + event.target.value + "%)"
+// })
 
-rangeInput.addEventListener("change", function (event) {
-    container.style.filter = "brightness(" + event.target.value + "%)"
-})
+const boxElem = document.querySelector(".box")
+console.log(boxElem.style.fontSize)
+let boxElemStyles = getComputedStyle(boxElem)
+console.log(boxElemStyles.backgroundColor)
+let boxElemHeight = getComputedStyle(boxElem).getPropertyValue("height")
+console.log(boxElemHeight)
+
 
 
 

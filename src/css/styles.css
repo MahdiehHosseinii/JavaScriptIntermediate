@@ -1697,7 +1697,7 @@ footer {
 
 }*/
 
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -1742,6 +1742,12 @@ footer {
     height: 22px;
     border-radius: 50%;
     cursor: pointer;
+}*/
+
+.box {
+    width: 200px;
+    height: 180px;
+    background-color: red;
 }
 
 
