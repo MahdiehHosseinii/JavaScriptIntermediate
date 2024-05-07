@@ -1163,32 +1163,40 @@
 //     }
 // })
 
-const addAnimationBtn = document.querySelector("button")
-const divElem = document.querySelector("div")
-const pElem = document.querySelector("p")
+// const addAnimationBtn = document.querySelector("button")
+// const divElem = document.querySelector("div")
+// const pElem = document.querySelector("p")
+//
+// function setAnimation () {
+//     divElem.style.animation = "move 4s 3"
+// }
+//
+// function animationStartHandler () {
+//     pElem.innerHTML = "Animation Start"
+//     divElem.style.backgroundColor = "pink"
+// }
+// function animationRepeatHandler () {
+//     pElem.innerHTML = "Animation Repeat"
+//     divElem.style.backgroundColor = "lightblue"
+// }
+// function animationEndHandler () {
+//     pElem.innerHTML = "Animation End"
+//     divElem.style.backgroundColor = "gray"
+// }
+//
+// addAnimationBtn.addEventListener("click" , setAnimation)
+//
+// divElem.addEventListener("animationstart" , animationStartHandler)
+// divElem.addEventListener("animationiteration" , animationRepeatHandler)
+// divElem.addEventListener("animationend" , animationEndHandler)
 
-function setAnimation () {
-    divElem.style.animation = "move 4s 3"
-}
+const rangeInput = document.querySelector("input")
+const container = document.querySelector(".container")
 
-function animationStartHandler () {
-    pElem.innerHTML = "Animation Start"
-    divElem.style.backgroundColor = "pink"
-}
-function animationRepeatHandler () {
-    pElem.innerHTML = "Animation Repeat"
-    divElem.style.backgroundColor = "lightblue"
-}
-function animationEndHandler () {
-    pElem.innerHTML = "Animation End"
-    divElem.style.backgroundColor = "gray"
-}
+rangeInput.addEventListener("change", function (event) {
+    container.style.filter = "brightness(" + event.target.value + "%)"
+})
 
-addAnimationBtn.addEventListener("click" , setAnimation)
-
-divElem.addEventListener("animationstart" , animationStartHandler)
-divElem.addEventListener("animationiteration" , animationRepeatHandler)
-divElem.addEventListener("animationend" , animationEndHandler)
 
 
 
