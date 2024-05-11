@@ -1228,14 +1228,42 @@
 // }
 // buttonElem.addEventListener("click", checkValue)
 
-const h1Elem = document.querySelector("h1")
+// const h1Elem = document.querySelector("h1")
+//
+// function styleHandler() {
+//     // h1Elem.style.color = "red"
+//     // h1Elem.style.backgroundColor = "pink"
+//     // h1Elem.style.fontSize = "50px"
+//     h1Elem.style.cssText = "color: red; background-color:pink; font-size:50px;"
+// }
 
-function styleHandler() {
-    // h1Elem.style.color = "red"
-    // h1Elem.style.backgroundColor = "pink"
-    // h1Elem.style.fontSize = "50px"
-    h1Elem.style.cssText = "color: red; background-color:pink; font-size:50px;"
+let $ = document
+let sliderImgElem = $.querySelector("img")
+let previousBtn = $.querySelector(".prev")
+let nextBtn = $.querySelector(".next")
+let imgSrcArray = ["src/images/1.jpg", "src/images/2.png", "src/images/3.jpg"]
+let imgIndex = 0
+
+function prevImg() {
+    imgIndex--
+    if (imgIndex < 0) {
+        imgIndex = imgSrcArray.length - 1
+    }
+    sliderImgElem.setAttribute("src", imgSrcArray[imgIndex])
 }
+
+function nextImg() {
+    imgIndex++
+    if (imgIndex > imgSrcArray.length - 1) {
+        imgIndex = 0
+    }
+    sliderImgElem.setAttribute("src", imgSrcArray[imgIndex])
+}
+
+setInterval(nextImg, 3000)
+previousBtn.addEventListener("click", prevImg)
+nextBtn.addEventListener("click", nextImg)
+
 
 
 
