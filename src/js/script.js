@@ -1264,47 +1264,64 @@
 // previousBtn.addEventListener("click", prevImg)
 // nextBtn.addEventListener("click", nextImg)
 
-let $ = document
-const weightInput = $.querySelector("#weight")
-const heightInput = $.querySelector("#height")
-const weightValue = $.querySelector("#weight-val")
-const heightValue = $.querySelector("#height-val")
-const bmiResult = $.querySelector("#result")
-const categoryElem = $.querySelector("#category")
+// let $ = document
+// const weightInput = $.querySelector("#weight")
+// const heightInput = $.querySelector("#height")
+// const weightValue = $.querySelector("#weight-val")
+// const heightValue = $.querySelector("#height-val")
+// const bmiResult = $.querySelector("#result")
+// const categoryElem = $.querySelector("#category")
+//
+// function bmiCalculator() {
+//     let weightInputValue = weightInput.value
+//     let heightInputValue = heightInput.value
+//
+//     weightValue.innerHTML = weightInputValue + " Kg"
+//     heightValue.innerHTML = heightInputValue + " Cm"
+//
+//     let bmiValue = (weightInputValue / (Math.pow(heightInputValue / 100, 2))).toFixed(1)
+//
+//     bmiResult.innerHTML = bmiValue
+//
+//     if (bmiValue < 18.5) {
+//         categoryElem.innerHTML = "Under Weight"
+//         categoryElem.style.cssText = "color:blue"
+//         bmiResult.style.cssText = "color:blue"
+//     } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
+//         categoryElem.innerHTML = "Normal Weight :)"
+//         categoryElem.style.cssText = "color:green"
+//         bmiResult.style.cssText = "color:green"
+//     } else if (bmiValue >= 25 && bmiValue <= 29.9) {
+//         categoryElem.innerHTML = "Over Weight"
+//         categoryElem.style.cssText = "color:yellow"
+//         bmiResult.style.cssText = "color:yellow"
+//     } else {
+//         categoryElem.innerHTML = "Obese"
+//         categoryElem.style.cssText = "color:red"
+//         bmiResult.style.cssText = "color:red"
+//     }
+// }
+//
+// weightInput.addEventListener("input", bmiCalculator)
+// heightInput.addEventListener("input", bmiCalculator)
 
-function bmiCalculator() {
-    let weightInputValue = weightInput.value
-    let heightInputValue = heightInput.value
+// var btnElem = document.querySelector("button")
+//
+// function changeCssVariable() {
+//     document.documentElement.style.setProperty("--test-color", "green")
+//     console.log(document.documentElement.style.getPropertyValue("--test-color"))
+// }
+//
+// btnElem.addEventListener("click", changeCssVariable)
 
-    weightValue.innerHTML = weightInputValue + " Kg"
-    heightValue.innerHTML = heightInputValue + " Cm"
+const colorBtns = document.querySelectorAll(".btn")
 
-    let bmiValue = (weightInputValue / (Math.pow(heightInputValue / 100, 2))).toFixed(1)
-
-    bmiResult.innerHTML = bmiValue
-
-    if (bmiValue < 18.5) {
-        categoryElem.innerHTML = "Under Weight"
-        categoryElem.style.cssText = "color:blue"
-        bmiResult.style.cssText = "color:blue"
-    } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
-        categoryElem.innerHTML = "Normal Weight :)"
-        categoryElem.style.cssText = "color:green"
-        bmiResult.style.cssText = "color:green"
-    } else if (bmiValue >= 25 && bmiValue <= 29.9) {
-        categoryElem.innerHTML = "Over Weight"
-        categoryElem.style.cssText = "color:yellow"
-        bmiResult.style.cssText = "color:yellow"
-    } else {
-        categoryElem.innerHTML = "Obese"
-        categoryElem.style.cssText = "color:red"
-        bmiResult.style.cssText = "color:red"
-    }
-}
-
-weightInput.addEventListener("input", bmiCalculator)
-heightInput.addEventListener("input", bmiCalculator)
-
+colorBtns.forEach(function (colorsBtn) {
+    colorsBtn.addEventListener("click", function (event) {
+        let btnColor = event.target.dataset.color
+        document.documentElement.style.setProperty("--theme-color", btnColor)
+    })
+})
 
 
 
