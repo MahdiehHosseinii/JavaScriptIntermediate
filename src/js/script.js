@@ -1314,12 +1314,21 @@
 //
 // btnElem.addEventListener("click", changeCssVariable)
 
-const colorBtns = document.querySelectorAll(".btn")
+// const colorBtns = document.querySelectorAll(".btn")
+//
+// colorBtns.forEach(function (colorsBtn) {
+//     colorsBtn.addEventListener("click", function (event) {
+//         let btnColor = event.target.dataset.color
+//         document.documentElement.style.setProperty("--theme-color", btnColor)
+//     })
+// })
 
-colorBtns.forEach(function (colorsBtn) {
-    colorsBtn.addEventListener("click", function (event) {
-        let btnColor = event.target.dataset.color
-        document.documentElement.style.setProperty("--theme-color", btnColor)
+document.addEventListener("keyup", function (event) {
+    let userEventKey = event.key.toUpperCase()
+    let mainKeyElem = document.getElementById(userEventKey)
+    mainKeyElem.classList.add("hit")
+    mainKeyElem.addEventListener("animationend", function () {
+        mainKeyElem.classList.remove("hit")
     })
 })
 
