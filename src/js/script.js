@@ -1323,7 +1323,9 @@
 //     })
 // })
 
+const titleElem = document.querySelector(".title")
 document.addEventListener("keyup", function (event) {
+    appendValueToDom(event)
     let userEventKey = event.key.toUpperCase()
     let mainKeyElem = document.getElementById(userEventKey)
     mainKeyElem.classList.add("hit")
@@ -1331,6 +1333,14 @@ document.addEventListener("keyup", function (event) {
         mainKeyElem.classList.remove("hit")
     })
 })
+
+function appendValueToDom(event) {
+    if (event.code === "Backspace") {
+        titleElem.innerHTML = titleElem.innerHTML.slice(0, -1)
+        return
+    }
+    titleElem.innerHTML += event.key
+}
 
 
 
