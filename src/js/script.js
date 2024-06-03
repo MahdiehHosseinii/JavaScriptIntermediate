@@ -1347,7 +1347,7 @@ const addBookBtn = $.querySelector(".add-btn")
 const titleInputElem = $.getElementById("title")
 const authorInputElem = $.getElementById("author")
 const yearInputElem = $.getElementById("year")
-const booksContainer = $.querySelector(".table")
+const booksContainer = $.querySelector("#book-list")
 let books = []
 
 addBookBtn.addEventListener("click", function (event) {
@@ -1370,12 +1370,34 @@ addBookBtn.addEventListener("click", function (event) {
 function setIntoLocalStorage(allBooksArray) {
     localStorage.setItem("books", JSON.stringify(allBooksArray))
     makeEmptyInputs()
+    booksGenerator(allBooksArray)
 }
 
 function makeEmptyInputs() {
     titleInputElem.value = ""
     authorInputElem.value = ""
     yearInputElem.value = ""
+}
+
+function booksGenerator (allBooksArray) {
+    booksContainer.innerHTML = ""
+
+    allBooksArray.forEach(function (book) {
+        let newBookTrElem = $.createElement("tr")
+
+        let newBookTitleTh = $.createElement("th")
+        newBookTitleTh.innerHTML = book.title
+
+        let newBookAuthorTh = $.createElement("th")
+        newBookAuthorTh.innerHTML = book.author
+
+        let newBookYearTh = $.createElement("th")
+        newBookYearTh.innerHTML = book.year
+
+        newBookTrElem.append(newBookTitleTh , newBookAuthorTh , newBookYearTh)
+
+        booksContainer.append(newBookTrElem)
+    })
 }
 
 
