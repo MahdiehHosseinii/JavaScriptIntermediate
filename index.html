@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
     <link href="src/css/styles.css" rel="stylesheet">
     <title>SabzLearn</title>
 </head>
@@ -761,12 +761,28 @@
         </tbody>
     </table>
 </div>-->
-<div class="clock">
+<!--<div class="clock">
     <div id="hour">00</div>
     <span>:</span>
     <div id="minute">00</div>
     <span>:</span>
     <div id="seconds">00</div>
+</div>-->
+<h1 class="text-center mt-5 mb-5">SabzLearn Text Generator</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-6 mt-4 mt-xl-0">
+            <form class="form-inline" action="" id="form">
+                <label for="amount">Paragraph Number: </label>
+                <input type="number" class="form-control mr-1 mb-1 mb-sm-0 ml-sm-2" name="amount" id="amount"
+                       placeholder="5"/>
+                <button class="btn btn-primary">Generate</button>
+            </form>
+        </div>
+        <div class="col-xl-6">
+            <article class="mt-4 mt-xl-0" id="result"></article>
+        </div>
+    </div>
 </div>
 
 
