@@ -1426,10 +1426,42 @@
 //
 // window.addEventListener('load', getBooksFromLocalStorage)
 
-let myTime = new Date()
-console.log(myTime.getFullYear())
-console.log(myTime.getSeconds())
-console.log(myTime.getDate())
+// let myTime = new Date()
+// console.log(myTime.getFullYear())
+// console.log(myTime.getSeconds())
+// console.log(myTime.getDate())
+
+let $ = document
+const hourElem = $.getElementById("hour")
+const minuteElem = $.getElementById("minute")
+const secondsElem = $.getElementById("seconds")
+
+
+setInterval(function () {
+    let myDate = new Date()
+
+    let nowHour = myDate.getHours()
+    let nowMinute = myDate.getMinutes()
+    let nowSecond = myDate.getSeconds()
+
+    hourElem.innerHTML = nowHour
+    minuteElem.innerHTML = nowMinute
+    secondsElem.innerHTML = nowSecond
+
+    if (nowHour < 10) {
+        nowHour = "0" + nowHour
+    }
+
+    if (nowMinute < 10) {
+        nowMinute = "0" + nowMinute
+    }
+
+    if (nowSecond < 10) {
+        nowSecond = "0" + nowSecond
+    }
+}, 1000)
+
+
 
 
 
