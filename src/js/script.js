@@ -1594,12 +1594,12 @@
 // setupPagination(listItems, paginationContainer, rowsCount)
 
 let allProducts = [
-    {id: 1, title: "Album 1", price: 12.93, img: "src/images/Album 1.png"},
-    {id: 2, title: "Album 2", price: 21.04, img: "src/images/Album 2.png"},
-    {id: 3, title: "Album 3", price: 33.76, img: "src/images/Album 3.png"},
-    {id: 4, title: "Album 4", price: 41.98, img: "src/images/Album 4.png"},
-    {id: 5, title: "coffee", price: 98.25, img: "src/images/Coffee.png"},
-    {id: 6, title: "shirt", price: 65.33, img: "src/images/Shirt.png"}
+    {id: 1, title: "Album 1", price: 12.93, img: "src/images/Album 1.png" , count: 1},
+    {id: 2, title: "Album 2", price: 21.04, img: "src/images/Album 2.png" , count: 1},
+    {id: 3, title: "Album 3", price: 33.76, img: "src/images/Album 3.png" , count: 1},
+    {id: 4, title: "Album 4", price: 41.98, img: "src/images/Album 4.png" , count: 1},
+    {id: 5, title: "coffee", price: 98.25, img: "src/images/Coffee.png" , count: 1},
+    {id: 6, title: "shirt", price: 65.33, img: "src/images/Shirt.png" , count: 1}
 ]
 
 let userBasket = []
@@ -1608,6 +1608,7 @@ let $ = document
 const shopItemsContainer = $.querySelector(".shop-items")
 const basketProductsContainer = $.querySelector(".cart-items")
 const removeAllProductsBtn = $.querySelector("#remove-all-products")
+const cartTotalPriceElem = $.querySelector(".cart-total-price")
 
 allProducts.forEach(function (product) {
     let productContainer = $.createElement("div")
@@ -1649,6 +1650,8 @@ function addProductToBasketArray(productId) {
     userBasket.push(mainProduct)
 
     basketProductsGenerator(userBasket)
+
+    calcTotalPrice(userBasket)
 }
 
 function basketProductsGenerator(userBasketArray) {
@@ -1681,7 +1684,7 @@ function basketProductsGenerator(userBasketArray) {
 
         let basketProductInput = $.createElement("input")
         basketProductInput.className ="cart-quantity cart-column"
-        basketProductInput.value = "1"
+        basketProductInput.value = product.count
         basketProductInput.setAttribute("type", "number")
 
         let basketProductRemoveBtn = $.createElement("button")
@@ -1711,6 +1714,15 @@ removeAllProductsBtn.addEventListener("click" , function () {
     userBasket = []
     basketProductsGenerator(userBasket)
 })
+
+function calcTotalPrice (userBasketArray) {
+    let totalPriceValue = 0
+
+    userBasketArray.forEach(function (product) {
+        totalPriceValue += product.count * product.price
+    })
+    cartTotalPriceElem.innerHTML = totalPriceValue
+}
 
 
 
