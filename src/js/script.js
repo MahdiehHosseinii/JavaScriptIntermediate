@@ -1594,12 +1594,12 @@
 // setupPagination(listItems, paginationContainer, rowsCount)
 
 let allProducts = [
-    {id: 1 , title: "Album 1" , price: 12.93 , img: "src/images/Album 1.png"} ,
-    {id: 2 , title: "Album 2" , price: 21.04 , img: "src/images/Album 2.png"} ,
-    {id: 3 , title: "Album 3" , price: 33.76 , img: "src/images/Album 3.png"} ,
-    {id: 4 , title: "Album 4" , price: 41.98 , img: "src/images/Album 4.png"} ,
-    {id: 5 , title: "cofee" , price: 98.25 , img: "src/images/Cofee.png"} ,
-    {id: 6 , title: "shirt" , price: 65.33 , img: "src/images/Shirt.png"}
+    {id: 1, title: "Album 1", price: 12.93, img: "src/images/Album 1.png"},
+    {id: 2, title: "Album 2", price: 21.04, img: "src/images/Album 2.png"},
+    {id: 3, title: "Album 3", price: 33.76, img: "src/images/Album 3.png"},
+    {id: 4, title: "Album 4", price: 41.98, img: "src/images/Album 4.png"},
+    {id: 5, title: "cofee", price: 98.25, img: "src/images/Cofee.png"},
+    {id: 6, title: "shirt", price: 65.33, img: "src/images/Shirt.png"}
 ]
 
 let userBasket = []
@@ -1618,7 +1618,7 @@ allProducts.forEach(function (product) {
 
     let productImageElem = $.createElement("img")
     productImageElem.classList.add("shop-item-image")
-    productImageElem.setAttribute("src" , product.img)
+    productImageElem.setAttribute("src", product.img)
 
     let productDetailsContainer = $.createElement("div")
     productDetailsContainer.classList.add("shop-item-details")
@@ -1630,26 +1630,28 @@ allProducts.forEach(function (product) {
     let productAddButton = $.createElement("button")
     productAddButton.innerHTML = "ADD TO CART"
     productAddButton.className = "btn btn-primary shop-item-button"
-    productAddButton.addEventListener("click" , function () {
+    productAddButton.addEventListener("click", function () {
         addProductToBasketArray(product.id)
     })
 
-    productDetailsContainer.append(productPriceSpan , productAddButton)
+    productDetailsContainer.append(productPriceSpan, productAddButton)
 
-    productContainer.append(productItemSpan , productImageElem , productDetailsContainer)
+    productContainer.append(productItemSpan, productImageElem, productDetailsContainer)
 
     shopItemsContainer.append(productContainer)
 })
 
-function addProductToBasketArray (productId) {
+function addProductToBasketArray(productId) {
     let mainProduct = allProducts.find(function (product) {
         return product.id === productId
     })
     userBasket.push(mainProduct)
-    console.log(userBasket)
+
+    basketProductsGenerator(userBasket)
 }
 
-function basketProductsGenerator (userBasketArray) {
+function basketProductsGenerator(userBasketArray) {
+    basketProductsContainer.innerHTML = ""
     userBasketArray.forEach(function (product) {
         let basketProductContainer = $.createElement("div")
         basketProductContainer.classList.add("cart-row")
@@ -1658,16 +1660,16 @@ function basketProductsGenerator (userBasketArray) {
         basketProductDetailsContainer.className = "cart-item cart-column"
 
         let basketProductImage = $.createElement("img")
-        basketProductImage.setAttribute("src" , product.img)
-        basketProductImage.setAttribute("width" , "100")
-        basketProductImage.setAttribute("height" , "100")
+        basketProductImage.setAttribute("src", product.img)
+        basketProductImage.setAttribute("width", "100")
+        basketProductImage.setAttribute("height", "100")
         basketProductImage.classList.add("cart-item-image")
 
         let basketProductTitleSpan = $.createElement("span")
         basketProductTitleSpan.classList.add("cart-item-title")
         basketProductTitleSpan.innerHTML = product.title
 
-        basketProductDetailsContainer.append(basketProductImage , basketProductTitleSpan)
+        basketProductDetailsContainer.append(basketProductImage, basketProductTitleSpan)
 
         let basketProductsPriceSpan = $.createElement("span")
         basketProductsPriceSpan.className = "cart-price cart-column"
@@ -1677,9 +1679,19 @@ function basketProductsGenerator (userBasketArray) {
         basketProductInputsContainer.className = "cart-quantity cart-column"
 
         let basketProductInput = $.createElement("input")
-        basketProductInput.classList.add("cart-quantity cart-column")
+        basketProductInput.className ="cart-quantity cart-column"
         basketProductInput.value = "1"
-        basketProductInput.setAttribute("type" , "number")
+        basketProductInput.setAttribute("type", "number")
+
+        let basketProductRemoveBtn = $.createElement("button")
+        basketProductRemoveBtn.className = "btn btn-danger"
+        basketProductRemoveBtn.innerHTML = "REMOVE"
+
+        basketProductInputsContainer.append(basketProductInput , basketProductRemoveBtn)
+
+        basketProductContainer.append(basketProductDetailsContainer, basketProductsPriceSpan, basketProductInputsContainer)
+
+        basketProductsContainer.append(basketProductContainer)
 
     })
 }
