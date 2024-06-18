@@ -1598,7 +1598,7 @@ let allProducts = [
     {id: 2, title: "Album 2", price: 21.04, img: "src/images/Album 2.png"},
     {id: 3, title: "Album 3", price: 33.76, img: "src/images/Album 3.png"},
     {id: 4, title: "Album 4", price: 41.98, img: "src/images/Album 4.png"},
-    {id: 5, title: "cofee", price: 98.25, img: "src/images/Cofee.png"},
+    {id: 5, title: "coffee", price: 98.25, img: "src/images/Coffee.png"},
     {id: 6, title: "shirt", price: 65.33, img: "src/images/Shirt.png"}
 ]
 
@@ -1607,6 +1607,7 @@ let userBasket = []
 let $ = document
 const shopItemsContainer = $.querySelector(".shop-items")
 const basketProductsContainer = $.querySelector(".cart-items")
+const removeAllProductsBtn = $.querySelector("#remove-all-products")
 
 allProducts.forEach(function (product) {
     let productContainer = $.createElement("div")
@@ -1686,6 +1687,9 @@ function basketProductsGenerator(userBasketArray) {
         let basketProductRemoveBtn = $.createElement("button")
         basketProductRemoveBtn.className = "btn btn-danger"
         basketProductRemoveBtn.innerHTML = "REMOVE"
+        basketProductRemoveBtn.addEventListener("click" , function () {
+            removeProductFromBasket(product.id)
+        })
 
         basketProductInputsContainer.append(basketProductInput , basketProductRemoveBtn)
 
@@ -1695,6 +1699,18 @@ function basketProductsGenerator(userBasketArray) {
 
     })
 }
+
+function removeProductFromBasket(productId) {
+    userBasket = userBasket.filter(function (product) {
+        return product.id !== productId
+    })
+    basketProductsGenerator(userBasket)
+}
+
+removeAllProductsBtn.addEventListener("click" , function () {
+    userBasket = []
+    basketProductsGenerator(userBasket)
+})
 
 
 
