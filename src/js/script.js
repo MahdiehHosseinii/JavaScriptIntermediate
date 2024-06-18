@@ -1594,12 +1594,12 @@
 // setupPagination(listItems, paginationContainer, rowsCount)
 
 let allProducts = [
-    {id: 1, title: "Album 1", price: 12.93, img: "src/images/Album 1.png" , count: 1},
-    {id: 2, title: "Album 2", price: 21.04, img: "src/images/Album 2.png" , count: 1},
-    {id: 3, title: "Album 3", price: 33.76, img: "src/images/Album 3.png" , count: 1},
-    {id: 4, title: "Album 4", price: 41.98, img: "src/images/Album 4.png" , count: 1},
-    {id: 5, title: "coffee", price: 98.25, img: "src/images/Coffee.png" , count: 1},
-    {id: 6, title: "shirt", price: 65.33, img: "src/images/Shirt.png" , count: 1}
+    {id: 1, title: "Album 1", price: 5, img: "src/images/Album 1.png" , count: 1},
+    {id: 2, title: "Album 2", price: 15, img: "src/images/Album 2.png" , count: 1},
+    {id: 3, title: "Album 3", price: 20, img: "src/images/Album 3.png" , count: 1},
+    {id: 4, title: "Album 4", price: 100, img: "src/images/Album 4.png" , count: 1},
+    {id: 5, title: "coffee", price: 5, img: "src/images/Coffee.png" , count: 1},
+    {id: 6, title: "shirt", price: 50, img: "src/images/Shirt.png" , count: 1}
 ]
 
 let userBasket = []
@@ -1686,6 +1686,9 @@ function basketProductsGenerator(userBasketArray) {
         basketProductInput.className ="cart-quantity cart-column"
         basketProductInput.value = product.count
         basketProductInput.setAttribute("type", "number")
+        basketProductInput.addEventListener("change" , function () {
+            updateProductCount(product.id , basketProductInput.value)
+        })
 
         let basketProductRemoveBtn = $.createElement("button")
         basketProductRemoveBtn.className = "btn btn-danger"
@@ -1722,6 +1725,15 @@ function calcTotalPrice (userBasketArray) {
         totalPriceValue += product.count * product.price
     })
     cartTotalPriceElem.innerHTML = totalPriceValue
+}
+
+function updateProductCount (productId , newCount) {
+    userBasket.forEach(function (product) {
+        if (product.id === productId) {
+            product.count = newCount
+        }
+    })
+    calcTotalPrice(userBasket)
 }
 
 
