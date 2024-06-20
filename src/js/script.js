@@ -1771,119 +1771,132 @@
 // boxElem.insertAdjacentHTML("beforebegin", "<li>Courses</li>")
 // boxElem.insertAdjacentHTML("afterend", "<li>Courses</li>")
 
-let allProducts = [
-    {id: 1, title: "Album 1", price: 5, img: "src/images/Album 1.png", count: 1},
-    {id: 2, title: "Album 2", price: 15, img: "src/images/Album 2.png", count: 1},
-    {id: 3, title: "Album 3", price: 20, img: "src/images/Album 3.png", count: 1},
-    {id: 4, title: "Album 4", price: 100, img: "src/images/Album 4.png", count: 1},
-    {id: 5, title: "coffee", price: 5, img: "src/images/Coffee.png", count: 1},
-    {id: 6, title: "shirt", price: 50, img: "src/images/Shirt.png", count: 1}
-]
+// let allProducts = [
+//     {id: 1, title: "Album 1", price: 5, img: "src/images/Album 1.png", count: 1},
+//     {id: 2, title: "Album 2", price: 15, img: "src/images/Album 2.png", count: 1},
+//     {id: 3, title: "Album 3", price: 20, img: "src/images/Album 3.png", count: 1},
+//     {id: 4, title: "Album 4", price: 100, img: "src/images/Album 4.png", count: 1},
+//     {id: 5, title: "coffee", price: 5, img: "src/images/Coffee.png", count: 1},
+//     {id: 6, title: "shirt", price: 50, img: "src/images/Shirt.png", count: 1}
+// ]
+//
+// let userBasket = []
+//
+// let $ = document
+// const shopItemsContainer = $.querySelector(".shop-items")
+// const basketProductsContainer = $.querySelector(".cart-items")
+// const removeAllProductsBtn = $.querySelector("#remove-all-products")
+// const cartTotalPriceElem = $.querySelector(".cart-total-price")
+//
+// allProducts.forEach(function (product) {
+//     shopItemsContainer.insertAdjacentHTML('beforeend', '<div class="shop-item"><span class="shop-item-title">' + product.title + '</span><img class="shop-item-image" src="' + product.img + '"><div class="shop-item-details"><span class="shop-item-price">' + product.price + '</span><button class="btn btn-primary shop-item-button" onclick="addProductToBasketArray(' + product.id + ')">ADD TO CART</button></div></div>')
+// })
+//
+// function addProductToBasketArray(productId) {
+//     let mainProduct = allProducts.find(function (product) {
+//         return product.id === productId
+//     })
+//     userBasket.push(mainProduct)
+//
+//     basketProductsGenerator(userBasket)
+//
+//     calcTotalPrice(userBasket)
+// }
+//
+// function basketProductsGenerator(userBasketArray) {
+//     basketProductsContainer.innerHTML = ""
+//     userBasketArray.forEach(function (product) {
+//         let basketProductContainer = $.createElement("div")
+//         basketProductContainer.classList.add("cart-row")
+//
+//         let basketProductDetailsContainer = $.createElement("div")
+//         basketProductDetailsContainer.className = "cart-item cart-column"
+//
+//         let basketProductImage = $.createElement("img")
+//         basketProductImage.setAttribute("src", product.img)
+//         basketProductImage.setAttribute("width", "100")
+//         basketProductImage.setAttribute("height", "100")
+//         basketProductImage.classList.add("cart-item-image")
+//
+//         let basketProductTitleSpan = $.createElement("span")
+//         basketProductTitleSpan.classList.add("cart-item-title")
+//         basketProductTitleSpan.innerHTML = product.title
+//
+//         basketProductDetailsContainer.append(basketProductImage, basketProductTitleSpan)
+//
+//         let basketProductsPriceSpan = $.createElement("span")
+//         basketProductsPriceSpan.className = "cart-price cart-column"
+//         basketProductsPriceSpan.innerHTML = product.price
+//
+//         let basketProductInputsContainer = $.createElement("div")
+//         basketProductInputsContainer.className = "cart-quantity cart-column"
+//
+//         let basketProductInput = $.createElement("input")
+//         basketProductInput.className = "cart-quantity cart-column"
+//         basketProductInput.value = product.count
+//         basketProductInput.setAttribute("type", "number")
+//         basketProductInput.addEventListener("change", function () {
+//             updateProductCount(product.id, basketProductInput.value)
+//         })
+//
+//         let basketProductRemoveBtn = $.createElement("button")
+//         basketProductRemoveBtn.className = "btn btn-danger"
+//         basketProductRemoveBtn.innerHTML = "REMOVE"
+//         basketProductRemoveBtn.addEventListener("click", function () {
+//             removeProductFromBasket(product.id)
+//         })
+//
+//         basketProductInputsContainer.append(basketProductInput, basketProductRemoveBtn)
+//
+//         basketProductContainer.append(basketProductDetailsContainer, basketProductsPriceSpan, basketProductInputsContainer)
+//
+//         basketProductsContainer.append(basketProductContainer)
+//
+//     })
+// }
+//
+// function removeProductFromBasket(productId) {
+//     userBasket = userBasket.filter(function (product) {
+//         return product.id !== productId
+//     })
+//     basketProductsGenerator(userBasket)
+// }
+//
+// removeAllProductsBtn.addEventListener("click", function () {
+//     userBasket = []
+//     basketProductsGenerator(userBasket)
+// })
+//
+// function calcTotalPrice(userBasketArray) {
+//     let totalPriceValue = 0
+//
+//     userBasketArray.forEach(function (product) {
+//         totalPriceValue += product.count * product.price
+//     })
+//     cartTotalPriceElem.innerHTML = totalPriceValue
+// }
+//
+// function updateProductCount(productId, newCount) {
+//     userBasket.forEach(function (product) {
+//         if (product.id === productId) {
+//             product.count = newCount
+//         }
+//     })
+//     calcTotalPrice(userBasket)
+// }
 
-let userBasket = []
-
-let $ = document
-const shopItemsContainer = $.querySelector(".shop-items")
-const basketProductsContainer = $.querySelector(".cart-items")
-const removeAllProductsBtn = $.querySelector("#remove-all-products")
-const cartTotalPriceElem = $.querySelector(".cart-total-price")
-
-allProducts.forEach(function (product) {
-    shopItemsContainer.insertAdjacentHTML('beforeend', '<div class="shop-item"><span class="shop-item-title">' + product.title + '</span><img class="shop-item-image" src="' + product.img + '"><div class="shop-item-details"><span class="shop-item-price">' + product.price + '</span><button class="btn btn-primary shop-item-button" onclick="addProductToBasketArray(' + product.id + ')">ADD TO CART</button></div></div>')
-})
-
-function addProductToBasketArray(productId) {
-    let mainProduct = allProducts.find(function (product) {
-        return product.id === productId
-    })
-    userBasket.push(mainProduct)
-
-    basketProductsGenerator(userBasket)
-
-    calcTotalPrice(userBasket)
+let user = {
+    id:1,
+    name: "mohammad",
+    pass: "12345",
+    age: 19
 }
+delete user.age
+console.log(user)
 
-function basketProductsGenerator(userBasketArray) {
-    basketProductsContainer.innerHTML = ""
-    userBasketArray.forEach(function (product) {
-        let basketProductContainer = $.createElement("div")
-        basketProductContainer.classList.add("cart-row")
-
-        let basketProductDetailsContainer = $.createElement("div")
-        basketProductDetailsContainer.className = "cart-item cart-column"
-
-        let basketProductImage = $.createElement("img")
-        basketProductImage.setAttribute("src", product.img)
-        basketProductImage.setAttribute("width", "100")
-        basketProductImage.setAttribute("height", "100")
-        basketProductImage.classList.add("cart-item-image")
-
-        let basketProductTitleSpan = $.createElement("span")
-        basketProductTitleSpan.classList.add("cart-item-title")
-        basketProductTitleSpan.innerHTML = product.title
-
-        basketProductDetailsContainer.append(basketProductImage, basketProductTitleSpan)
-
-        let basketProductsPriceSpan = $.createElement("span")
-        basketProductsPriceSpan.className = "cart-price cart-column"
-        basketProductsPriceSpan.innerHTML = product.price
-
-        let basketProductInputsContainer = $.createElement("div")
-        basketProductInputsContainer.className = "cart-quantity cart-column"
-
-        let basketProductInput = $.createElement("input")
-        basketProductInput.className = "cart-quantity cart-column"
-        basketProductInput.value = product.count
-        basketProductInput.setAttribute("type", "number")
-        basketProductInput.addEventListener("change", function () {
-            updateProductCount(product.id, basketProductInput.value)
-        })
-
-        let basketProductRemoveBtn = $.createElement("button")
-        basketProductRemoveBtn.className = "btn btn-danger"
-        basketProductRemoveBtn.innerHTML = "REMOVE"
-        basketProductRemoveBtn.addEventListener("click", function () {
-            removeProductFromBasket(product.id)
-        })
-
-        basketProductInputsContainer.append(basketProductInput, basketProductRemoveBtn)
-
-        basketProductContainer.append(basketProductDetailsContainer, basketProductsPriceSpan, basketProductInputsContainer)
-
-        basketProductsContainer.append(basketProductContainer)
-
-    })
-}
-
-function removeProductFromBasket(productId) {
-    userBasket = userBasket.filter(function (product) {
-        return product.id !== productId
-    })
-    basketProductsGenerator(userBasket)
-}
-
-removeAllProductsBtn.addEventListener("click", function () {
-    userBasket = []
-    basketProductsGenerator(userBasket)
-})
-
-function calcTotalPrice(userBasketArray) {
-    let totalPriceValue = 0
-
-    userBasketArray.forEach(function (product) {
-        totalPriceValue += product.count * product.price
-    })
-    cartTotalPriceElem.innerHTML = totalPriceValue
-}
-
-function updateProductCount(productId, newCount) {
-    userBasket.forEach(function (product) {
-        if (product.id === productId) {
-            product.count = newCount
-        }
-    })
-    calcTotalPrice(userBasket)
-}
+let scores = [10,29,30,5]
+delete scores[2]
+console.log(scores)
 
 
 
