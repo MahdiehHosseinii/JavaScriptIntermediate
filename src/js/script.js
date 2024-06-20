@@ -1736,33 +1736,42 @@
 //     calcTotalPrice(userBasket)
 // }
 
-function mouseDownHandler() {
-    console.log("mouse down")
-}
+// function mouseDownHandler() {
+//     console.log("mouse down")
+// }
+//
+// function mouseUpHandler() {
+//     console.log("mouse up")
+// }
+//
+// function mouseEnterHandler() {
+//     console.log("mouse enter")
+// }
+//
+// function mouseLeaveHandler() {
+//     console.log("mouse leave")
+// }
+//
+// function mouseOverHandler() {
+//     console.log("mouse over")
+// }
+//
+// function mouseOutHandler() {
+//     console.log("mouse out")
+// }
+//
+// function mouseMoveHandler() {
+//     console.log("mouse move")
+// }
 
-function mouseUpHandler() {
-    console.log("mouse up")
-}
+let boxElem = document.querySelector(".box")
 
-function mouseEnterHandler() {
-    console.log("mouse enter")
-}
+boxElem.insertAdjacentHTML("afterbegin", "<li>Courses</li>")
+boxElem.insertAdjacentHTML("beforeend", "<li>Courses</li>")
+boxElem.insertAdjacentHTML("beforebegin", "<li>Courses</li>")
+boxElem.insertAdjacentHTML("afterend", "<li>Courses</li>")
 
-function mouseLeaveHandler() {
-    console.log("mouse leave")
-}
 
-function mouseOverHandler() {
-    console.log("mouse over")
-}
-
-function mouseOutHandler() {
-    console.log("mouse out")
-}
-
-function mouseMoveHandler() {
-    console.log("mouse move")
-}
 
 
 
