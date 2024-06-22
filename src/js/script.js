@@ -1885,18 +1885,40 @@
 //     calcTotalPrice(userBasket)
 // }
 
-let user = {
-    id:1,
-    name: "mohammad",
-    pass: "12345",
-    age: 19
-}
-delete user.age
-console.log(user)
+// let user = {
+//     id:1,
+//     name: "mohammad",
+//     pass: "12345",
+//     age: 19
+// }
+// delete user.age
+// console.log(user)
+//
+// let scores = [10,29,30,5]
+// delete scores[2]
+// console.log(scores)
 
-let scores = [10,29,30,5]
-delete scores[2]
-console.log(scores)
+let usersList = document.querySelector("#users")
+
+let usersArray = [
+    "amin" ,
+    "ali" ,
+    "amir" ,
+    "babak" ,
+    "hasan" ,
+    "qadir"
+]
+
+let newUserLi = null
+let usersFragment = document.createDocumentFragment()
+usersArray.forEach(function (user) {
+    newUserLi = document.createElement("li")
+    newUserLi.innerHTML = user
+
+    usersFragment.append(newUserLi)
+})
+
+usersList.append(usersFragment)
 
 
 
