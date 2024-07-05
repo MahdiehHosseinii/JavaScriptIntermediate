@@ -2113,10 +2113,22 @@
 //
 // console.log("%cwarning" , "color: blue")
 
-let divElem = document.querySelector("div")
+// let divElem = document.querySelector("div")
+//
+// console.log("client width:" + divElem.clientWidth)
+// console.log("client height:" + divElem.clientHeight)
 
-console.log("client width:" + divElem.clientWidth)
-console.log("client height:" + divElem.clientHeight)
+let customScroll = document.getElementById("scroll")
+
+window.addEventListener("scroll", function () {
+    let scrollTop = window.scrollY
+    let documentHeight = document.body.clientHeight
+    let windowHeight = window.innerHeight
+    let scrollPercent = scrollTop / (documentHeight - windowHeight)
+    let scrollPercentRounded = Math.round(scrollPercent * 100)
+    customScroll.style.width = scrollPercentRounded + "%"
+    console.log(scrollPercentRounded)
+})
 
 
 
