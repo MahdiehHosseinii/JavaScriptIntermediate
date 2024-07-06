@@ -2130,12 +2130,36 @@
 //     console.log(scrollPercentRounded)
 // })
 
-console.log(location)
-console.log(location.protocol)
-console.log(location.hostname)
-console.log(location.pathname)
-console.log(location.search)
-console.log(location.hash)
+// console.log(location)
+// console.log(location.protocol)
+// console.log(location.hostname)
+// console.log(location.pathname)
+// console.log(location.search)
+// console.log(location.hash)
+
+let userInfo = document.querySelector("h1")
+let users = [
+    {id: 1, name: "ali", age: 24},
+    {id: 2, name: "amir", age: 23},
+    {id: 3, name: "amin", age: 28},
+    {id: 4, name: "babak", age: 32},
+    {id: 5, name: "hasan", age: 25},
+    {id: 6, name: "hossein", age: 45}
+]
+let locationSearch = location.search
+
+let locationSearchParams = new URLSearchParams(locationSearch)
+let userIdParam = locationSearchParams.get("id")
+
+let mainUsers = users.find(function (user) {
+    return user.id == userIdParam
+})
+
+if (mainUsers) {
+    userInfo.innerHTML = "name: " + mainUsers.name + "| age: " + mainUsers.age
+} else {
+    userInfo.innerHTML = "user is not defined"
+}
 
 
 
