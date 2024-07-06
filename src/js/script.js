@@ -2118,18 +2118,24 @@
 // console.log("client width:" + divElem.clientWidth)
 // console.log("client height:" + divElem.clientHeight)
 
-let customScroll = document.getElementById("scroll")
+// let customScroll = document.getElementById("scroll")
+//
+// window.addEventListener("scroll", function () {
+//     let scrollTop = window.scrollY
+//     let documentHeight = document.body.clientHeight
+//     let windowHeight = window.innerHeight
+//     let scrollPercent = scrollTop / (documentHeight - windowHeight)
+//     let scrollPercentRounded = Math.round(scrollPercent * 100)
+//     customScroll.style.width = scrollPercentRounded + "%"
+//     console.log(scrollPercentRounded)
+// })
 
-window.addEventListener("scroll", function () {
-    let scrollTop = window.scrollY
-    let documentHeight = document.body.clientHeight
-    let windowHeight = window.innerHeight
-    let scrollPercent = scrollTop / (documentHeight - windowHeight)
-    let scrollPercentRounded = Math.round(scrollPercent * 100)
-    customScroll.style.width = scrollPercentRounded + "%"
-    console.log(scrollPercentRounded)
-})
-
+console.log(location)
+console.log(location.protocol)
+console.log(location.hostname)
+console.log(location.pathname)
+console.log(location.search)
+console.log(location.hash)
 
 
 
