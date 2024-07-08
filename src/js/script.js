@@ -2137,29 +2137,41 @@
 // console.log(location.search)
 // console.log(location.hash)
 
-let userInfo = document.querySelector("h1")
-let users = [
-    {id: 1, name: "ali", age: 24},
-    {id: 2, name: "amir", age: 23},
-    {id: 3, name: "amin", age: 28},
-    {id: 4, name: "babak", age: 32},
-    {id: 5, name: "hasan", age: 25},
-    {id: 6, name: "hossein", age: 45}
+// let userInfo = document.querySelector("h1")
+// let users = [
+//     {id: 1, name: "ali", age: 24},
+//     {id: 2, name: "amir", age: 23},
+//     {id: 3, name: "amin", age: 28},
+//     {id: 4, name: "babak", age: 32},
+//     {id: 5, name: "hasan", age: 25},
+//     {id: 6, name: "hossein", age: 45}
+// ]
+// let locationSearch = location.search
+//
+// let locationSearchParams = new URLSearchParams(locationSearch)
+// let userIdParam = locationSearchParams.get("id")
+//
+// let mainUsers = users.find(function (user) {
+//     return user.id == userIdParam
+// })
+//
+// if (mainUsers) {
+//     userInfo.innerHTML = "name: " + mainUsers.name + "| age: " + mainUsers.age
+// } else {
+//     userInfo.innerHTML = "user is not defined"
+// }
+
+let productsContainer = document.querySelector('.container')
+
+let productsArray = [
+    { id: 1, title: 'Sport Shoe', price: 53, img: 'src/images/1.png' },
+    { id: 2, title: 'Women Shoe', price: 81, img: 'src/images/2.png' },
+    { id: 3, title: 'Boots', price: 34, img: 'src/images/3.png' },
 ]
-let locationSearch = location.search
 
-let locationSearchParams = new URLSearchParams(locationSearch)
-let userIdParam = locationSearchParams.get("id")
-
-let mainUsers = users.find(function (user) {
-    return user.id == userIdParam
+productsArray.forEach(function (product) {
+    productsContainer.insertAdjacentHTML('beforeend', '<div class="product-card"><h1>' + product.title + '</h1><p>Lorem ipsum, or lipsum as it is sometimes known</p><div class="product-pic" style="background-image: url(' + product.img + ');"></div><div class="product-info"><div class="product-price">$' + product.price + '</div><a href="product.html?id=' + product.id + '" class="product-button">See More</a></div></div>')
 })
-
-if (mainUsers) {
-    userInfo.innerHTML = "name: " + mainUsers.name + "| age: " + mainUsers.age
-} else {
-    userInfo.innerHTML = "user is not defined"
-}
 
 
 
