@@ -2166,7 +2166,7 @@ let productsContainer = document.querySelector('.container')
 let productsArray = [
     { id: 1, title: 'Sport Shoe', price: 53, img: 'src/images/1.png' },
     { id: 2, title: 'Women Shoe', price: 81, img: 'src/images/2.png' },
-    { id: 3, title: 'Boots', price: 34, img: 'src/images/3.png' },
+    { id: 3, title: 'Boots', price: 34, img: 'src/images/3.png' }
 ]
 
 productsArray.forEach(function (product) {
