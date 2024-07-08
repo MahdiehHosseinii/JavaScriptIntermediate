@@ -2173,10 +2173,22 @@
 //     productsContainer.insertAdjacentHTML('beforeend', '<div class="product-card"><h1>' + product.title + '</h1><p>Lorem ipsum, or lipsum as it is sometimes known</p><div class="product-pic" style="background-image: url(' + product.img + ');"></div><div class="product-info"><div class="product-price">$' + product.price + '</div><a href="product.html?id=' + product.id + '" class="product-button">See More</a></div></div>')
 // })
 
-let reloadBtn = document.querySelector("button")
+// let reloadBtn = document.querySelector("button")
+//
+// reloadBtn.addEventListener("click" , function () {
+//     location.reload()
+// })
 
-reloadBtn.addEventListener("click" , function () {
-    location.reload()
+let h1Elem = document.querySelector("h1")
+
+window.addEventListener("online", function () {
+    h1Elem.innerHTML = "online"
+    h1Elem.className = "online"
+})
+
+window.addEventListener("offline", function () {
+    h1Elem.innerHTML = "offline"
+    h1Elem.className = "offline"
 })
 
 
